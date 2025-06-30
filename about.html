@@ -1,0 +1,1145 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+
+	
+	<title>Muse Cafe </title>
+
+</head>
+<body>
+
+
+<style>
+ {
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box;
+   font-family: Arial, sans-serif;
+ }
+
+ body {
+   background-color: #FFFFFF;
+ }
+
+ .navbar {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   background-color: #DEAA79;
+   padding: 10px 50px;
+   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+ }
+
+ .navbar img {
+   width: 55px;
+   height: 50px;
+   height: auto;
+   border-radius: 50%;
+ }
+
+ nav ul {
+   list-style: none;
+   display: flex;
+   gap: 20px;
+   align-items: center;
+ }
+
+ nav ul li {
+   position: relative;
+ }
+
+ nav ul li a {
+   display: block;
+   padding: 10px 15px;
+   color: white;
+   text-decoration: none;
+   font-weight: bold;
+   border-radius: 5px;
+   transition: background 0.3s;
+   background-color: #DEAA79;
+ }
+
+ nav ul li a:hover {
+   background-color: #f4a460;
+   color: black;
+ }
+
+ .dropdown {
+   display: none;
+   position: absolute;
+   background-color: #DEAA79;
+   top: 100%;
+   left: 0;
+   min-width: 160px;
+   z-index: 1;
+   flex-direction: column;
+    max-height: 300px; 
+   overflow-y: auto;  
+ }
+
+ .dropdown li {
+   display: block;
+ }
+
+ nav ul li:hover .dropdown {
+   display: block;
+ }
+
+ .rounded-img {
+   border-radius: 30px;
+   margin: 10px;
+ }
+
+ .content-section {
+   display: none;
+   padding: 20px;
+ }
+
+ .content-section.active {
+   display: block;
+ }
+
+ .menu-section {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+   gap: 20px;
+   padding: 20px;
+   background-color: #FFFFFF; 
+   border-radius: 20px;
+   margin: 30px;
+ }
+
+ .menu-item {
+   background-color: #fff8ee; 
+   border-radius: 10px;
+   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+   width: 250px;
+   text-align: center;
+   padding: 15px;
+ }
+
+ .menu-item img {
+   width: 100%;
+   height: 200px;
+   object-fit: cover;
+   border-radius: 10px;
+ }
+
+ .menu-item h3 {
+   margin: 10px 0 5px;
+   font-size: 1.2em;
+   color: #4B2E1F;
+ }
+
+ .menu-item p {
+   color: #555;
+   font-size: 0.9em;
+ }
+
+ .menu-item .price {
+   margin-top: 10px;
+   font-weight: bold;
+   color: #F4A460;
+ }
+
+ 
+
+</style>
+
+
+
+</head>
+<body>
+
+<div class="navbar">
+ <img src="Muse Coffee.jpg" alt="Cafe Logo">
+<nav>
+     <ul>
+  <li><a href="index.html">Home</a></li>
+
+  <li>
+    <a href="about.html">About Us</a>
+    <ul class="dropdown">
+      <li><a href="our story.html">Journey</a></li>
+    </ul>
+  </li>
+
+  <li>
+    <a href="menu-food.html">Food</a>
+    <ul class="dropdown">
+      <li><a href="hot-meals.html">Hot Meals</a></li>
+      <li><a href="snacks.html">Snacks</a></li>
+      <li><a href="dessert.html">Dessert</a></li>
+      <li><a href="pastries.html">Pastries</a></li>
+      <li><a href="cookies.html">Cookies</a></li>
+      <li><a href="ice cream.html">Ice Cream</a></li>
+    </ul>
+  </li>
+
+<li>
+	<a href="menu-drinks.html">Drinks</a>
+	<ul class="dropdown">
+      <li><a href="frappe.html">Frappe</a></li>
+      <li><a href="coffee.html">Coffee</a></li>
+      <li><a href="hot-drinks-and-juice.html">Hot Drinks and Juice</a></li>
+      <li><a href="iced-beverage.html">Iced Beverage</a></li>
+      <li><a href="specialty-drinks.html">Specialty Drinks</a></li>
+    </ul>
+	</li>
+	
+	
+  <li><a href="location.html">Location</a></li>
+  <li><a href="feedback.html">Feedback</a></li>
+  <li><a href="contact.html">Contact</a></li>
+  <li><a href="cart.html">Add to Cart</a></li>
+</ul>
+</nav>
+</div>
+
+
+
+</body>
+    
+
+  <style>
+
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      color: #333;
+      background: #fff;
+    }
+
+    header {
+      background: #1c1c1c;
+      color: #fff;
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    nav a {
+      color: #fff;
+      margin: 0 10px;
+      text-decoration: none;
+    }
+
+    .hero {
+      background: center/cover no-repeat;
+      padding: 120px 40px 60px;
+      text-align: center;
+      color: #fff;
+      position: relative;
+    }
+
+    .hero::after {
+      content: '';
+      background: rgba(0, 0, 0, 0.4);
+      position: absolute;
+      inset: 0;
+    }
+
+    .hero h1 {
+      font-size: 48px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .section {
+      padding: 60px 40px;
+      text-align: center;
+    }
+	
+	.intro-title {
+	font-family: 'Playfair Display', serif;
+	font-size: 2.8em;
+	color: #5b3b1d;
+	margin-bottom: 20px;
+	}
+
+
+    .highlight {
+      color: #ff5722;
+      font-weight: bold;
+    }
+
+    .features {
+      display: flex;
+      justify-content: space-around;
+      margin-top: 40px;
+      flex-wrap: wrap;
+    }
+
+    .feature-box {
+      width: 280px;
+      background: #fff;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      padding: 20px;
+      margin: 15px;
+      border-radius: 10px;
+    }
+
+    .feature-box i {
+      font-size: 36px;
+      color: #ff5722;
+      margin-bottom: 15px;
+    }
+
+    .media-section {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 60px;
+    }
+
+    .media-section img,
+    .media-section video {
+      max-width: 45%;
+      margin: 10px;
+      border-radius: 15px;
+    }
+
+    .team-section {
+      background: #f9f9f9;
+      padding: 60px 40px;
+      text-align: center;
+    }
+
+    .team-grid {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+	  max-width: 900px;
+	  margin: auto;
+    }
+
+    .team-card {
+      background: #fff;
+      width: 170px;
+      padding: 15px;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+
+    .team-card img {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      margin-bottom: 10px;
+    }
+
+    .team-card h4 {
+      margin: 10px 0 5px;
+    }
+
+    .team-card p {
+      color: gray;
+      font-size: 14px;
+      margin: 5px 0;
+    }
+
+    .team-card .social {
+      margin-top: 10px;
+    }
+
+
+
+   
+  </style>
+
+
+</head>
+<body>
+
+
+
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+    color: #1f1e1e;
+  }
+
+  .about-banner {
+    width: 100%;
+    overflow: hidden;
+    background-color: #f4e3c1;
+    padding: 20px 0;
+  }
+
+  .banner-slide {
+    display: flex;
+    align-items: center;
+    width: max-content;
+    animation: scrollAbout 20s linear infinite;
+  }
+
+  .banner-slide img {
+    height: 250px;
+    width: auto;
+    margin-right: 30px;
+    border-radius: 12px;
+  }
+
+  .about-text {
+    font-size: 2.2em;
+    font-weight: bold;
+    color: #6b3e26;
+    white-space: nowrap;
+    padding: 0 50px;
+    font-family: 'Playfair Display', serif;
+  }
+
+  @keyframes scrollAbout {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-70%);
+    }
+  }
+</style>
+
+<body>
+
+  <div class="about-banner">
+    <div class="banner-slide">
+      <img src="vibes.jpg" alt="Notes">
+      <img src="hai coffee.jpg" alt="Hoffee">
+      <img src="cat x coffee.jpg" alt="Cat Coffee">
+      <div class="about-text">☕ Welcome to Morning Muse Café – Discover our story, passion & cozy vibes! ☕</div>
+    
+      <img src="vibes.jpg" alt="Notes Repeat">
+      <img src="hai coffee.jpg" alt="Hoffee Repeat">
+      <img src="cat x coffee.jpg" alt="Cat Coffee Repeat">
+      <div class="about-text">☕ Welcome to Morning Muse Café – Discover our story, passion & cozy vibes! ☕</div>
+    </div>
+  </div>
+
+
+
+
+
+
+<section class="section">
+	<section class="section">
+	<h1 class="intro-title">Introduction</h1>
+	<p class="intro-sub">The Best Cafe Ever!</p> 
+	<p class="intro-desc">
+   </p>
+
+  
+  <p> Welcome to Morning Muse Cafe- a concept of website was created as part of our group assignment for IML254. Our goal was to design a modern corporate cafe website that highlight strong branding,clear navigation,and engaging content.</p>
+  <div class="features">
+    <div class="feature-box">
+      <i><span>&#128176;</span></i>
+      <h4>Best Price Guaranteed</h4>
+      <p>Came to our Cafe and experiece itself</p>
+    </div>
+    <div class="feature-box">
+      <i><span>&#9749;</span></i>
+      <h4>Coffee or Tricks</h4>
+      <p>We will serve not matter what happen</p>
+    </div>
+    <div class="feature-box">
+      <i><span>&#128522;</span></i>
+      <h4>Friendly Staff</h4>
+      <p>We always smile to our customer</p>
+    </div>
+  </div>
+
+  
+  
+ <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding-top: 20px;
+      background-color: #f9f9f9;
+    }
+
+    h2 {
+      text-align: center;
+    }
+
+    .container {
+      position: relative;
+      max-width: 500px;
+      margin: auto;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    .mySlides {
+      display: none;
+    }
+
+    .mySlides img {
+      width: 100%;
+      max-height: 400px;
+      object-fit: cover;
+    }
+
+    .prev,
+    .next {
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      padding: 16px;
+      color: white;
+      font-weight: bold;
+      font-size: 20px;
+      border-radius: 3px;
+      background-color: rgba(0, 0, 0, 0.5);
+      user-select: none;
+      -webkit-user-select: none;
+      z-index: 1;
+    }
+
+    .prev {
+      left: 10px;
+    }
+
+    .next {
+      right: 10px;
+    }
+
+    .numbertext {
+      color: #f2f2f2;
+      font-size: 12px;
+      padding: 8px 12px;
+      position: absolute;
+      top: 0;
+    }
+
+    .caption-container {
+      text-align: center;
+      background-color: #333;
+      padding: 8px 16px;
+      color: white;
+      font-size: 1.1em;
+      font-weight: bold;
+    }
+
+    .row::after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+
+    .column {
+      float: left;
+      width: 16.66%;
+      padding: 5px;
+    }
+
+    .demo {
+      width: 100%;
+      height: 80px;
+      object-fit: cover;
+      opacity: 0.6;
+      cursor: pointer;
+      border-radius: 5px;
+      transition: 0.3s;
+    }
+
+    .active,
+    .demo:hover {
+      opacity: 1;
+      border: 2px solid #DEAA79;
+    }
+  </style>
+  
+<body>
+
+<h2 style="text-align:center">Our Gallery</h2>
+
+<div class="container">
+  <div class="mySlides">
+    <div class="numbertext">1 / 6</div>
+    <img src="cafe.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">2 / 6</div>
+    <img src="cafe vibe.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">3 / 6</div>
+    <img src="friendly staf.jpg" style="width:100%">
+  </div>
+    
+  <div class="mySlides">
+    <div class="numbertext">4 / 6</div>
+    <img src="cofe.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">5 / 6</div>
+    <img src="staff 2.jpg" style="width:100%">
+  </div>
+  
+   <div class="mySlides">
+    <div class="numbertext">6 / 6</div>
+    <img src="cake.jpg" style="width:100%">
+  </div>
+    
+  <a class="prev" onclick="plusSlides(-1)">❮</a>
+  <a class="next" onclick="plusSlides(1)">❯</a>
+
+  <div class="caption-container">
+    <p id="caption"></p>
+  </div>
+
+  <div class="row">
+    <div class="column">
+      <img class="demo cursor" src="cafe.jpg" style="width:100%" onclick="currentSlide(1)" alt="Good Vibes">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="cafe vibe.jpg" style="width:100%" onclick="currentSlide(2)" alt="Better Cafe">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="friendly staf.jpg" style="width:100%" onclick="currentSlide(3)" alt="Ready to Serve">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="cofe.jpg" style="width:100%" onclick="currentSlide(4)" alt="Sippin in Style">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="staff 2.jpg" style="width:100%" onclick="currentSlide(5)" alt="Cuteness Staf Overload">
+    </div>   
+	<div class="column">
+      <img class="demo cursor" src="cake.jpg" style="width:100%" onclick="currentSlide(5)" alt="Sweets Treats">
+    </div>   	
+  </div>
+</div>
+
+<script>
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("demo");
+  let captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+</script>
+    
+	
+
+
+
+<section class="team-section">
+  <h2>Team Members</h2>
+  <p>Reliable support for all your needs</p>
+  <div class="team-grid">
+    <div class="team-card">
+      <img src="member 1.jpg" alt="Fatin">
+      <h4>Fatin Nur Afiqah</h4>
+      <p>Design Curator</p>
+      <div class="social">
+      
+      </div>
+    </div>
+    <div class="team-card">
+      <img src="member 2.jpg" alt="Alissa">
+      <h4>Nur Alissa</h4>
+      <p>Idea Developer</p>
+      <div class="social">
+        
+      </div>
+    </div>
+    <div class="team-card">
+      <img src="member 4.jpg" alt="at mira">
+      <h4>Atiqah Amira</h4>
+      <p>Project lead</p>
+      <div class="social">
+       
+      </div>
+    </div>
+    <div class="team-card">
+      <img src="member 3.jpg" alt="Hanin">
+      <h4>NurHafizah Hanin</h4>
+      <p>Strategic Planner</p>
+      <div class="social">
+      
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<br><br><br>
+
+
+
+ <style>
+        {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            background-color: #f5f5f5;
+        }
+
+       
+        .demo-content {
+            height: 100vh;
+            background: linear-gradient(135deg, #f8f8f8, #e8e8e8);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        .demo-content h1 {
+            color: #00704a;
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        .demo-content p {
+            color: #666;
+            font-size: 1.2rem;
+        }
+
+      
+        footer {
+            background: #deaa79;
+            padding: 60px 0 0 0;
+            position: relative;
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 40px;
+            position: relative;
+        }
+
+       
+       
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 40px;
+			padding: 40px;
+			max-width: 1200px;
+			margin: 0 auto;
+           
+        }
+
+        .footer-column {
+            color: #deaa79;
+        }
+
+        .footer-column h3 {
+            font-size: 16px;
+            margin-bottom: 10px;
+            color: #1e1e1e;
+        }
+
+        .footer-column ul {
+            list-style: none;
+			padding:0;
+        }
+
+        .footer-column ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-column ul li a {
+            color: #4a4a4a;
+            text-decoration: none;
+            font-size: 14px;
+            transition: color 0.3s ease;
+            display: block;
+        }
+
+        .footer-column ul li a:hover {
+            color: #deaa79;
+        }
+
+ 
+        .social-icons {
+            position: absolute;
+            left: 40px;
+            bottom: 40px;
+            display: flex;
+            gap: 15px;
+        }
+
+        .social-icons a {
+            color: #1e1e1e;
+            font-size: 24px;
+            transition: all 0.3s ease;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background-color: rgba(255,255,255,0.1);
+        }
+
+        .social-icons a:hover {
+            background-color: rgba(255,255,255,0.2);
+            transform: translateY(-2px);
+        }
+
+
+        .muse-logo {
+            position: absolute;
+            right: 40px;
+            bottom: 40px;
+            transform: rotate(90deg);
+            font-size: 18px;
+            font-weight: 700;
+            letter-spacing: 3px;
+            color: #1e1e1e;
+        }
+		
+		footer {
+		background-color: #deaa79;
+		}
+   
+        .footer-bottom {
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .footer-bottom-left {
+            display: flex;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .footer-bottom-left a {
+            color: #1e1e1e;
+            text-decoration: none;
+            font-size: 13px;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .footer-bottom-left a:hover {
+            color: #4a4a4a;
+        }
+
+        .footer-bottom-right {
+            color: #1e1e1e;
+            font-size: 13px;
+        }
+
+      
+
+        @media (max-width: 1024px) {
+            .footer-content {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 30px;
+            }
+
+            .muse-logo {
+			position: absolute;
+			right: 40px;
+			bottom: 40px;
+			transform: rotate(90deg);
+			font-size: 18px;
+			font-weight: 700;
+			letter-spacing: 3px;
+			color: #1e1e1e;
+			}
+        }
+
+        @media (max-width: 768px) {
+            .footer-content {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 25px;
+            }
+
+            .footer-container {
+                padding: 0 20px;
+            }
+
+            .social-icons {
+                position: static;
+                justify-content: center;
+                margin: 20px 0;
+            }
+
+            .footer-bottom {
+                flex-direction: column;
+                text-align: center;
+                padding: 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+        }
+    </style>
+
+
+</head>
+<body>
+   
+    <footer>
+
+        
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>ABOUT US</h3>
+                    <ul>
+                        <li><a href="#">Our Journey</a></li>
+                        <li><a href="#">Our Gallery</a></li>
+                        <li><a href="#">Team Member</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3>COFFEE</h3>
+                    <ul>
+                        <li><a href="#">Our Coffee</a></li>
+                        <li><a href="#">Brewing Guides</a></li>
+                        <li><a href="#">Ethical Sourcing</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3>MENU</h3>
+                    <ul>
+                        <li><a href="#">Drinks</a></li>
+                        <li><a href="#">Food</a></li>
+    
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3>SITE TERMS</h3>
+                    <ul>
+                       <li><a href="#">Terms of Use</a></li>
+          		<li><a href="#">Privacy Policy</a></li>
+          		<li><a href="#">Do Not Sell Info</a></li>
+          		<li><a href="#">Legal Notice</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3>CUSTOMER SERVICE</h3>
+                    <ul>
+                        <li><a href="#">Contact Us</a></li>
+			<li><a href="#">Returns</a></li>
+			<li><a href="#">Delivery</a></li>
+                        <li><a href="#">FAQ's</a></li>
+                    </ul>
+                </div>
+            </div>
+
+        
+          
+
+    
+   
+          <div style="font-size: 14px; color: #4a2c2a;"> 
+			<p>&copy;<strong> 2025 Morning Muse Cafe. All rights reserved.</strong></p>
+		</div>
+	</footer>
+  
+  
+  
+  
+  
+   <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+        }
+
+ 
+        .go-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background-color: #00704a;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            font-size: 18px;
+            cursor: pointer;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+            transition: all 0.3s ease;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(20px);
+            z-index: 1000;
+        }
+
+        .go-to-top.visible {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .go-to-top:hover {
+            background-color: #005a3a;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.4);
+        }
+
+        .go-to-top:active {
+            transform: translateY(0);
+        }
+
+
+        .go-to-top::before {
+            content: '↑';
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .go-to-top-text {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background-color: #00704a;
+            color: white;
+            border: none;
+            border-radius: 25px;
+            padding: 10px 20px;
+            font-size: 14px;
+            font-weight: bold;
+            cursor: pointer;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+            transition: all 0.3s ease;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(20px);
+            z-index: 1000;
+            display: none; 
+        }
+
+        .go-to-top-text.visible {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .go-to-top-text:hover {
+            background-color: #005a3a;
+            transform: translateY(-2px);
+        }
+
+       
+    </style>
+
+
+
+ <button class="go-to-top" id="goToTopBtn" onclick="scrollToTop()" title="Go to top"></button>
+    <button class="go-to-top-text" id="goToTopTextBtn" onclick="scrollToTop()" title="Go to top">
+    </button>
+
+    <script>
+        const goToTopBtn = document.getElementById('goToTopBtn');
+        const goToTopTextBtn = document.getElementById('goToTopTextBtn');
+        let currentStyle = 'icon'; 
+
+        window.addEventListener('scroll', function() {
+            if (window.pageYOffset > 300) {
+                if (currentStyle === 'icon') {
+                    goToTopBtn.classList.add('visible');
+                } else {
+                    goToTopTextBtn.classList.add('visible');
+                }
+            } else {
+                goToTopBtn.classList.remove('visible');
+                goToTopTextBtn.classList.remove('visible');
+            }
+        });
+
+       
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+
+        
+        function toggleButtonStyle() {
+            if (currentStyle === 'icon') {
+                goToTopBtn.style.display = 'none';
+                goToTopTextBtn.style.display = 'block';
+                currentStyle = 'text';
+            } else {
+                goToTopBtn.style.display = 'block';
+                goToTopTextBtn.style.display = 'none';
+                currentStyle = 'icon';
+            }
+            
+           
+            window.dispatchEvent(new Event('scroll'));
+        }
+
+    </script>
+
+	
+	
+
+</body>
+</html>
+
+
+
+
+
+ 

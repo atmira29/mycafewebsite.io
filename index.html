@@ -1,0 +1,1015 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+
+
+	<title>Muse Cafe </title>
+
+</head>
+<body>
+
+<style>
+ {
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box;
+   font-family: Arial, sans-serif;
+ }
+
+ body {
+   background-color: #FFFFFF;
+ }
+
+ .navbar {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   background-color: #DEAA79;
+   padding: 10px 50px;
+   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+ }
+
+ .navbar img {
+   width: 55px;
+   height: 50px;
+   height: auto;
+   border-radius: 50%;
+ }
+
+ nav ul {
+   list-style: none;
+   display: flex;
+   gap: 20px;
+   align-items: center;
+ }
+
+ nav ul li {
+   position: relative;
+ }
+
+ nav ul li a {
+   display: block;
+   padding: 10px 15px;
+   color: white;
+   text-decoration: none;
+   font-weight: bold;
+   border-radius: 5px;
+   transition: background 0.3s;
+   background-color: #DEAA79;
+ }
+
+ nav ul li a:hover {
+   background-color: #f4a460;
+   color: black;
+ }
+
+ .dropdown {
+   display: none;
+   position: absolute;
+   background-color: #DEAA79;
+   top: 100%;
+   left: 0;
+   min-width: 160px;
+   z-index: 1;
+   flex-direction: column;
+   max-height: 300px; 
+   overflow-y: auto;  
+ }
+
+ .dropdown li {
+   display: block;
+ }
+
+ nav ul li:hover .dropdown {
+   display: block;
+ }
+
+ .rounded-img {
+   border-radius: 30px;
+   margin: 10px;
+ }
+
+ .content-section {
+   display: none;
+   padding: 20px;
+ }
+
+ .content-section.active {
+   display: block;
+ }
+
+ .menu-section {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+   gap: 20px;
+   padding: 20px;
+   background-color: #FFFFFF; 
+   border-radius: 20px;
+   margin: 30px;
+ }
+
+ .menu-item {
+   background-color: #fff8ee; 
+   border-radius: 10px;
+   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+   width: 250px;
+   text-align: center;
+   padding: 15px;
+ }
+
+ .menu-item img {
+   width: 100%;
+   height: 200px;
+   object-fit: cover;
+   border-radius: 10px;
+ }
+
+ .menu-item h3 {
+   margin: 10px 0 5px;
+   font-size: 1.2em;
+   color: #4B2E1F;
+ }
+
+ .menu-item p {
+   color: #555;
+   font-size: 0.9em;
+ }
+
+ .menu-item .price {
+   margin-top: 10px;
+   font-weight: bold;
+   color: #F4A460;
+ }
+
+ .footer {
+   background-color: #DEAA79;
+   border-top: 1px solid #ccc;
+   padding: 40px 20px 20px;
+   font-family: Arial, sans-serif;
+ }
+
+ .footer-container {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-between;
+   align-items: flex-start;
+   max-width: 1200px;
+   margin: auto;
+ }
+
+ .footer-logo img {
+   width: 120px;
+   border-radius: 25%;
+ }
+
+ .footer-links {
+   display: flex;
+   flex-wrap: wrap;
+   gap: 60px;
+   flex-grow: 1;
+   justify-content: flex-end;
+ }
+
+ .footer-column h3 {
+   font-size: 1.1em;
+   margin-bottom: 15px;
+   font-weight: bold;
+   color: #333;
+ }
+
+ .footer-column ul {
+   list-style: none;
+   padding: 0;
+ }
+
+ .footer-column ul li {
+   margin-bottom: 10px;
+ }
+
+ .footer-column ul li a {
+   color: #333;
+   text-decoration: none;
+   font-size: 0.95em;
+ }
+
+ .footer-column ul li a:hover {
+   text-decoration: underline;
+ }
+
+ .footer-bottom {
+   border-top: 1px solid #eee;
+   margin-top: 30px;
+   padding-top: 15px;
+   text-align: center;
+   font-size: 0.85em;
+   color: #555;
+ }
+
+</style>
+
+
+</head>
+<body>
+
+<div class="navbar">
+ <img src="Muse Coffee.jpg" alt="Cafe Logo">
+<nav>
+     <ul>
+  <li><a href="index.html">Home</a></li>
+
+  <li>
+    <a href="about.html">About Us</a>
+    <ul class="dropdown">
+      <li><a href="our story.html">Journey</a></li>
+    </ul>
+  </li>
+
+  <li>
+    <a href="menu-food.html">Food</a>
+    <ul class="dropdown">
+      <li><a href="hot-meals.html">Hot Meals</a></li>
+      <li><a href="snacks.html">Snacks</a></li>
+      <li><a href="dessert.html">Dessert</a></li>
+      <li><a href="pastries.html">Pastries</a></li>
+      <li><a href="cookies.html">Cookies</a></li>
+      <li><a href="ice-cream.html">Ice Cream</a></li>
+    </ul>
+  </li>
+
+ <li>
+	<a href="menu-drinks.html">Drinks</a>
+	<ul class="dropdown">
+      <li><a href="frappe.html">Frappe</a></li>
+      <li><a href="coffee.html">Coffee</a></li>
+      <li><a href="hot-drinks-and-juice.html">Hot Drinks and Juice</a></li>
+      <li><a href="iced-beverage.html">Iced Beverage</a></li>
+      <li><a href="specialty-drinks.html">Specialty Drinks</a></li>
+    </ul>
+	</li>
+	
+  <li><a href="location.html">Location</a></li>
+  <li><a href="feedback.html">Feedback</a></li>
+  <li><a href="contact.html">Contact</a></li>
+  <li><a href="cart.html">Add to Cart</a></li>
+</ul>
+</nav>
+</div>
+
+
+
+
+
+</body>
+</html>
+
+
+
+
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #ffffff;
+      color: #1f1e1e;
+    }
+	.banner-container {
+		overflow: hidden;
+		white-space: nowrap;
+		width: 100%;
+		background-color: #fff;
+	}
+
+	.banner-track {
+		display: inline-block;
+		white-space: nowrap;
+		animation: scrollBanner 20s linear infinite;
+	}
+
+	.banner-track img {
+		height: 250px;
+		width: auto;
+		display: inline-block;
+	}
+  
+	@keyframes scrollBanner {
+	0% {
+		transform: translateX(0);
+	}
+	100% {
+    transform: translateX(-40%);
+	}
+	}
+ 
+    .banner-wrapper {
+      width: 100%;
+      overflow: hidden;
+      background-color: #fff;
+    }
+
+    .banner-slide {
+      display: flex;
+	  width: max-content;
+      animation: slideBanner 20s linear infinite;
+    }
+
+    .banner-slide img {
+      height: 250px;
+	  width: auto;
+      flex-shrink: 0;
+    }
+
+    @keyframes slideBanner {
+      0% {
+        transform: translateX(0%);
+      }
+      100% {
+        transform: translateX(-50%);
+      }
+    }
+
+    header {
+      background-color: #f4e3c1;
+      color: #1f1e1e;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 2.5em;
+	  font-family: 'Playfair Display', serif;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 1.2em;
+      margin-bottom: 20px;
+    }
+
+    footer {
+      background-color: #deaa79;
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9em;
+      color: #1f1e1e;
+    }
+  </style>
+  
+</head>
+<body>
+
+
+
+  <div class="banner-wrapper">
+  <div class="banner-slide">
+    <img src="Banner coffee.jpg" alt="Banner 1">
+    <img src="coffee2.png" alt="Banner 2">
+    <img src="coffee3.png" alt="Banner 3">
+    <img src="coffee4.png" alt="Banner 4">
+	
+	<img src="Banner coffee.jpg" alt="Banner 1 repeat">
+    <img src="coffee2.jpg" alt="Coffee 2 repeat">
+    <img src="coffee3.jpg" alt="Coffee 3 repeat">
+    <img src="coffee4.jpg" alt="Coffee 4 repeat">
+  </div>
+</div>
+ 
+
+
+
+  <header>
+    <h1>Brewed To Perfection, Served With Love</h1>
+    <p>Indulge in handcrafted coffee, freshly baked pastries, and a welcoming atmosphere designed to inspire and unwind.</p>
+     <button class="button" onclick="window.location.href='menu-food.html'">Order Online</button>
+    <button class="button" style="background-color: #f4e3c1; color: #1f1e1e; border: 1px solid #1f1e1e;" onclick="window.location.href='location.html'">Find a Location</button>
+</header>
+  </header>
+
+  
+  
+  
+  
+<style>
+{box-sizing: border-box}
+body {font-family: Verdana, sans-serif; margin:0}
+.mySlides {display: none}
+img {vertical-align: middle;}
+
+.mySlides img{
+	width:100%;
+	height: 600px;
+	object-fit: cover;
+	
+}	
+
+.slideshow-container {
+  width: 100%;
+  position: relative;
+  margin: 0;
+}
+
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+  
+}
+
+.text {
+  color: #000000;
+  font-size: 28px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+.numbertext {
+  color: #000000;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #000000;
+}
+
+
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+</style>
+</head>
+<body>
+
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <div class="numbertext">1 / 3</div>
+  <img src="pastries.jpg" style="width:100%">
+  <div class="text">Classic Pastries</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">2 / 3</div>
+  <img src="cookies.jpg" style="width:100%">
+  <div class="text">Chewy Cookiess</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 3</div>
+  <img src="ice cream.jpg" style="width:100%">
+  <div class="text">Nostalgia Ice Cream</div>
+</div>
+
+<a class="prev" onclick="plusSlides(-1)">❮</a>
+<a class="next" onclick="plusSlides(1)">❯</a>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+</div>
+
+<script>
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
+
+</body>
+</html> 
+
+  
+  
+  
+  
+  <style>
+  
+ body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    .coffee-section {
+      background-color: #DEAA79;
+      color: #000000;
+      padding: 60px 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 40px;
+      max-width: 1000px;
+      margin-bottom: 40px;
+    }
+
+    .text-box {
+      flex: 1;
+      min-width: 280px;
+    }
+
+    .image-box {
+      flex: 1;
+      min-width: 280px;
+    }
+
+    .image-box img {
+      width: 100%;
+      border-radius: 8px;
+    }
+
+    h2 {
+      font-size: 28px;
+      margin-bottom: 15px;
+    }
+
+    p {
+      font-size: 16px;
+      line-height: 1.6;
+    }
+
+    .button {
+      margin-top: 15px;
+      padding: 10px 20px;
+      background-color: black;
+      color: white;
+      border: none;
+	  border-radius: 6px;
+      cursor: pointer;
+    }
+
+    .button:hover {
+      background-color: #333;
+    }
+	
+	.section.dark {
+	background-color: #fce9d4;
+	padding: 40px 20px;
+	text-align: center;
+}
+
+	.locations {
+	display: flex;
+	justify-content: center;
+	gap: 40px;
+	flex-wrap: wrap;
+	margin-top: 30px;
+}
+
+	.locations div {
+	background-color: #fff5e6;
+	padding: 20px;
+	border-radius: 12px;
+	box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+	width: 220px;
+	font-size: 16px;
+	text-align: left;
+	
+}
+
+	
+
+	
+  </style>
+  
+  
+</head>
+<body>
+
+  <section class="coffee-section">
+    <div class="row">
+      <div class="image-box">
+         <img src="coffee.jpg" alt="Time for coffee">
+      </div>
+      <div class="text-box">
+        <h2>It's Coffee Time!</h2>
+        <p>We believe that every cup of coffee can change some people mood and bring people closer. So what you waiting for, join us to celebrating with community.  .</p>
+        <a href="menu-drinks.html" class="button" style="text-decoration: none;">View our menu</a>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="text-box">
+        <h2>Made in Muse</h2>
+        <p>Welcome to Morning Muse Coffee, where the charm of Morning Muse meets the aroma of freshly brewed coffee. Our café is a cozy haven where friends gather, ideas spark, and every sip tells a story.</p>
+        <a href="about.html" class="button" style="text-decoration: none;">Learn more</a>
+      </div>
+      <div class="image-box">
+        <img src="ice coffee.jpg" alt="Cold or Cool">
+      </div>
+    </div>
+  </section>
+  
+  
+  
+<br><br><br>
+
+
+
+<style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .myImg {
+      border-radius: 5px;
+      cursor: pointer;
+      transition: 0.3s;
+      width: 100%;
+      max-width: 500px;
+      margin: 10px;
+    }
+
+    .myImg:hover {
+      opacity: 0.7;
+    }
+
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1;
+      padding-top: 100px;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0, 0, 0, 0.9);
+    }
+
+    .modal-content {
+      margin: auto;
+      display: block;
+      width: 90%;
+      max-width: 800px;
+    }
+
+    #caption {
+      margin: auto;
+      display: block;
+      width: 80%;
+      max-width: 700px;
+      text-align: center;
+      color: #ccc;
+      padding: 10px 0;
+      height: 50px;
+    }
+
+    .modal-content, #caption {
+      animation-name: zoom;
+      animation-duration: 0.6s;
+    }
+
+    @keyframes zoom {
+      from {transform: scale(0)}
+      to {transform: scale(1)}
+    }
+
+    .close {
+      position: absolute;
+      top: 15px;
+      right: 35px;
+      color: #f1f1f1;
+      font-size: 40px;
+      font-weight: bold;
+      transition: 0.3s;
+	  cursor: pointer;
+    }
+
+    .close:hover,
+    .close:focus {
+      color: #bbb;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    @media only screen and (max-width: 700px) {
+      .modal-content {
+        width: 100%;
+      }
+    }
+  </style>
+  
+  
+  
+</head>
+<body>
+
+<div class="gallery">
+  <img class="myImg" src="latte.jpg" alt="The aroma of coffee soothes the soul">
+  <img class="myImg" src="bean.jpg" alt="Bitter coffee,sweet memories">
+  <img class="myImg" src="espresso.jpg" alt="Love begins with a cup of coffee">
+  <img class="myImg" src="heal with coffee.jpg" alt="No coffee, big problem">
+</div>
+
+
+<div id="myModal" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="img01">
+  <div id="caption"></div>
+</div>
+
+<script>
+  var modal = document.getElementById("myModal");
+  var modalImg = document.getElementById("img01");
+  var captionText = document.getElementById("caption");
+
+  var images = document.querySelectorAll(".myImg");
+  images.forEach(function(img) {
+    img.onclick = function() {
+      modal.style.display = "block";
+      modalImg.src = this.src;
+      captionText.innerHTML = this.alt;
+    }
+  });
+
+  var span = document.getElementsByClassName("close")[0];
+  span.onclick = function() {
+    modal.style.display = "none";
+  }
+</script>
+
+
+
+
+  <br><br><br>
+  
+  <div class="section dark">
+    <h2>Locations</h2>
+    <div class="locations">
+      <div>
+        <strong>Kedah</strong>
+		<p>No. 12, Jalan Lagenda Heights2 ,08000 Sungai Petani, Kedah</p>
+      </div>
+      <div>
+        <strong>Kelantan</strong>
+        <p>Lot 45, Jalan Sultan Yahya Petra,15200 Kota Bharu, Kelantan</p>
+      </div>
+      <div>
+        <strong>Selangor</strong>
+        <p> 190, Jalan Tuanku Abdul Rahman, City Centre, 50100 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur</p>
+      </div>
+    </div>
+  </div>
+
+  
+   <br><br><br>
+  
+  
+  
+  <footer style="background color:#fcefe3;;padding:30px;text align: center; border-top: 2px solid #c2a270;">
+	<div style="margin-bottom: 20px;">
+    <p style="color: #4a2c2a; font size: 18px; font weight: bold; font-style: italic;"> 
+		Follow Us: <span style="clor:#8b4513;"> @MorningMuseCoffee25 </span> 
+		</p>
+		<a href="https://www.instagram.com/morningmusecoffee25" target="_blank" style=" margin: 0 10px;">
+		<img src="ig logo.jpg" alt="Instagram" style=" width: 30px;">
+		</a>
+		</div>
+		
+    <div style="margin-bottom: 30px;">
+	<label style="font-weight: bold;"> Join our newsletter:</label><br>
+      <input type="email" placeholder="Enter Your Email"
+		style="padding: 8px; width: 250px; border-radius: 6px; border: 1px solid #ccc; margin-top: 10px;">
+      <button style ="padding: 8px 12px; background-color: #8b4513;color: white; border: none; border-radius: 6px; cursor: pointer; margin-top: 10px;">
+	  Subscribe
+	  </button>
+   </div>
+
+ <div style="font-size: 14px; color: #4a2c2a;"> 
+     <p> &copy;<strong> 2025 Morning Muse Cafe. All rights reserved.</strong> </p>
+    </div>
+  </footer>
+
+  
+  
+   <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+        }
+
+ 
+        .go-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background-color: #00704a;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            font-size: 18px;
+            cursor: pointer;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+            transition: all 0.3s ease;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(20px);
+            z-index: 1000;
+        }
+
+        .go-to-top.visible {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .go-to-top:hover {
+            background-color: #005a3a;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.4);
+        }
+
+        .go-to-top:active {
+            transform: translateY(0);
+        }
+
+
+        .go-to-top::before {
+            content: '↑';
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .go-to-top-text {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background-color: #00704a;
+            color: white;
+            border: none;
+            border-radius: 25px;
+            padding: 10px 20px;
+            font-size: 14px;
+            font-weight: bold;
+            cursor: pointer;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+            transition: all 0.3s ease;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(20px);
+            z-index: 1000;
+            display: none; 
+        }
+
+        .go-to-top-text.visible {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .go-to-top-text:hover {
+            background-color: #005a3a;
+            transform: translateY(-2px);
+        }
+
+       
+    </style>
+
+
+
+ <button class="go-to-top" id="goToTopBtn" onclick="scrollToTop()" title="Go to top"></button>
+    <button class="go-to-top-text" id="goToTopTextBtn" onclick="scrollToTop()" title="Go to top">
+        ↑ GO TO TOP
+    </button>
+
+    <script>
+        const goToTopBtn = document.getElementById('goToTopBtn');
+        const goToTopTextBtn = document.getElementById('goToTopTextBtn');
+        let currentStyle = 'icon'; 
+
+        window.addEventListener('scroll', function() {
+            if (window.pageYOffset > 300) {
+                if (currentStyle === 'icon') {
+                    goToTopBtn.classList.add('visible');
+                } else {
+                    goToTopTextBtn.classList.add('visible');
+                }
+            } else {
+                goToTopBtn.classList.remove('visible');
+                goToTopTextBtn.classList.remove('visible');
+            }
+        });
+
+       
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+
+        
+        function toggleButtonStyle() {
+            if (currentStyle === 'icon') {
+                goToTopBtn.style.display = 'none';
+                goToTopTextBtn.style.display = 'block';
+                currentStyle = 'text';
+            } else {
+                goToTopBtn.style.display = 'block';
+                goToTopTextBtn.style.display = 'none';
+                currentStyle = 'icon';
+            }
+            
+           
+            window.dispatchEvent(new Event('scroll'));
+        }
+
+    </script>
+
+	
+	
+	
+</body>
+</html>
+

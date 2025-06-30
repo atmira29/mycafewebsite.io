@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+ <title>Morning Muse Cafe</title>
+
+</head>
+<body>
+
+
+
+ <style>
+
+		{
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: "Times New Roman", serif;
+    }
+
+    body {
+      background-color: #ffffff;
+      color: #333;
+      line-height: 1.6;
+    }
+
+ 
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #DEAA79;
+      padding: 10px 50px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    .navbar img {
+      width: 55px;
+      height: 50px;
+      border-radius: 50%;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+      align-items: center;
+    }
+
+    nav ul li {
+      position: relative;
+    }
+
+    nav ul li a {
+      display: block;
+      padding: 10px 15px;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 5px;
+      transition: background 0.3s;
+      background-color: #DEAA79;
+    }
+
+    nav ul li a:hover {
+      background-color: #f4a460;
+      color: black;
+    }
+
+    .dropdown {
+      display: none;
+      position: absolute;
+      background-color: #DEAA79;
+      top: 100%;
+      left: 0;
+      min-width: 160px;
+      z-index: 1;
+      flex-direction: column;
+      max-height: 300px; 
+      overflow-y: auto;  
+    }
+
+    .dropdown li {
+      display: block;
+    }
+
+    nav ul li:hover .dropdown {
+      display: block;
+    }
+
+ 
+    #container {
+      padding: 20px;
+      max-width: 960px;
+      margin: auto;
+    }
+
+    header {
+      text-align: center;
+      padding: 30px 0 10px;
+    }
+
+    header h1 {
+      font-size: 2.5em;
+      color: #5b3b1d;
+	  font-family: 'Playfair Display', serif;
+	  letter-spacing: 1px;
+	  
+    }
+
+    section#feedback {
+      background-color: #fce4ec;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      margin-top: 30px;
+    }
+
+    section#feedback h2 {
+      text-align: center;
+      margin-bottom: 15px;
+      color: #5b3b1d;
+	  font-family: 'Great Vibes', cursive;
+    }
+
+    section#feedback p {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    form {
+      max-width: 500px;
+      margin: auto;
+    }
+
+    label {
+      margin-top: 15px;
+      display: block;
+      font-weight: bold;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-family: inherit;
+    }
+
+    textarea {
+      resize: vertical;
+    }
+
+    button[type="submit"] {
+      background-color: #d17f3f;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      margin-top: 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 1em;
+    }
+
+    button[type="submit"]:hover {
+      background-color: #b8682f;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 50px;
+      font-size: 0.9em;
+      color: #1c1818;
+    }
+
+    @media (max-width: 600px) {
+      nav ul {
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      section#feedback {
+        padding: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+ 
+  <div class="navbar">
+    <img src="Muse Coffee.jpg" alt="Cafe Logo">
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+
+        <li>
+          <a href="about.html">About Us</a>
+          <ul class="dropdown">
+            <li><a href="our story.html">Journey</a></li>
+          </ul>
+        </li>
+
+        <li>
+          <a href="menu-food.html">Food</a>
+          <ul class="dropdown">
+            <li><a href="hot-meals.html">Hot Meals</a></li>
+            <li><a href="snacks.html">Snacks</a></li>
+            <li><a href="dessert.html">Dessert</a></li>
+            <li><a href="pastries.html">Pastries</a></li>
+            <li><a href="cookies.html">Cookies</a></li>
+            <li><a href="ice-cream.html">Ice Cream</a></li>
+          </ul>
+        </li>
+
+        <li>
+          <a href="menu-drinks.html">Drinks</a>
+          <ul class="dropdown">
+            <li><a href="frappe.html">Frappe</a></li>
+            <li><a href="coffee.html">Coffee</a></li>
+            <li><a href="hot-drinks-and-juice.html">Hot Drinks and Juice</a></li>
+            <li><a href="iced-beverage.html">Iced Beverage</a></li>
+            <li><a href="specialty-drinks.html">Specialty Drinks</a></li>
+          </ul>
+        </li>
+
+        <li><a href="location.html">Location</a></li>
+        <li><a href="feedback.html">Feedback</a></li>
+        <li><a href="contact.html">Contact</a></li>
+		<li><a href="cart.html">Add to Cart</a></li>
+      </ul>
+    </nav>
+  </div>
+
+
+  <div id="container">
+    <header>
+      <h1>Feedback</h1>
+    </header>
+
+    <section id="feedback">
+      <h2>We Value Your Feedback</h2>
+      <p>Please fill out the form below to share your experience with us.</p>
+      <form action="submit-feedback.php" method="post">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="experience">How was your experience?</label>
+        <select id="experience" name="experience" required>
+          <option value="">--Please choose an option--</option>
+          <option value="excellent">Excellent</option>
+          <option value="good">Good</option>
+          <option value="average">Average</option>
+          <option value="poor">Poor</option>
+        </select>
+
+        <label for="comments">Additional Comments:</label>
+        <textarea id="comments" name="comments" rows="5"></textarea>
+
+        <button type="submit">Submit Feedback</button>
+      </form>
+    </section>
+
+	
+	<style>
+  footer {
+	  background-color: #DEAA79;
+	  border-top: 1px solid #ccc;
+	  padding: 40px 100px 20px;
+	  font-family: Arial, sans-serif;
+	  width: 100%;
+	  box-sizing: border-box;
+	}
+
+	.footer-container {
+	  display: flex;
+	  flex-wrap: wrap;
+	  justify-content: space-between;
+	  align-items: flex-start;
+	  width: 100%;
+	  padding: 0 60px;
+	}
+
+	.footer-logo img {
+	  width: 60px;
+	  border-radius: 20%;
+	}
+
+	.footer-links {
+	  display: flex;
+	  flex-wrap: wrap;
+	  gap: 60px;
+	  flex-grow: 1;
+	  justify-content: flex-end;
+	}
+
+	.footer-column h3 {
+	  font-size: 1.1em;
+	  margin-bottom: 5px;
+	  font-weight: bold;
+	  color: #333;
+	}
+
+	.footer-column ul {
+	  list-style: none;
+	  padding: 0;
+	}
+
+	.footer-column ul li {
+	  margin-bottom: 10px;
+	}
+
+	.footer-column ul li a {
+	  color: #333;
+	  text-decoration: none;
+	  font-size: 0.95em;
+	}
+
+	.footer-column ul li a:hover {
+	  text-decoration: underline;
+	}
+
+	.footer-bottom {
+	  border-top: 1px solid #eee;
+	  margin-top: 30px;
+	  padding-top: 5px;
+	  text-align: center;
+	  font-size: 0.85em;
+	  color: #555;
+	}
+</style>
+
+
+
+<footer>
+  <div class="footer-container">
+    <div class="footer-logo">
+      <img src="Muse Coffee.jpg" alt="Logo">
+    </div>
+    <div class="footer-links">
+      <div class="footer-column">
+        <h3>Our Company</h3>
+        <ul>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">Our Story</a></li>
+          <li><a href="#">Franchising</a></li>
+          <li><a href="#">Store Locator</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h3>Site Terms</h3>
+        <ul>
+          <li><a href="#">Terms of Use</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Do Not Sell Info</a></li>
+          <li><a href="#">Legal Notice</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h3>Customer Care</h3>
+        <ul>
+          <li><a href="#" onclick="showSection('contact')">Contact Us</a></li>
+          <li><a href="#">Returns</a></li>
+          <li><a href="#">Shipping</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2025 Morning Muse Cafe. All rights reserved.</p>
+  </div>
+</footer>
+
+
+
+
+
+
+	
+  <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+        }
+
+ 
+        .go-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background-color: #00704a; 
+            border: none;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            font-size: 18px;
+            cursor: pointer;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+            transition: all 0.3s ease;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(20px);
+            z-index: 1000;
+        }
+
+        .go-to-top.visible {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .go-to-top:hover {
+            background-color: #005a3a;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.4);
+        }
+
+        .go-to-top:active {
+            transform: translateY(0);
+        }
+
+
+        .go-to-top::before {
+            content: '↑';
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .go-to-top-text {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background-color: #00704a;
+            color: white;
+            border: none;
+            border-radius: 25px;
+            padding: 10px 20px;
+            font-size: 14px;
+            font-weight: bold;
+            cursor: pointer;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+            transition: all 0.3s ease;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(20px);
+            z-index: 1000;
+            display: none; 
+        }
+
+        .go-to-top-text.visible {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .go-to-top-text:hover {
+            background-color: #005a3a;
+            transform: translateY(-2px);
+        }
+
+       
+    </style>
+
+
+
+ <button class="go-to-top" id="goToTopBtn" onclick="scrollToTop()" title="Go to top"></button>
+    <button class="go-to-top-text" id="goToTopTextBtn" onclick="scrollToTop()" title="Go to top">
+        ↑ GO TO TOP
+    </button>
+
+    <script>
+        const goToTopBtn = document.getElementById('goToTopBtn');
+        const goToTopTextBtn = document.getElementById('goToTopTextBtn');
+        let currentStyle = 'icon'; 
+
+        window.addEventListener('scroll', function() {
+            if (window.pageYOffset > 300) {
+                if (currentStyle === 'icon') {
+                    goToTopBtn.classList.add('visible');
+                } else {
+                    goToTopTextBtn.classList.add('visible');
+                }
+            } else {
+                goToTopBtn.classList.remove('visible');
+                goToTopTextBtn.classList.remove('visible');
+            }
+        });
+
+       
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+
+        
+        function toggleButtonStyle() {
+            if (currentStyle === 'icon') {
+                goToTopBtn.style.display = 'none';
+                goToTopTextBtn.style.display = 'block';
+                currentStyle = 'text';
+            } else {
+                goToTopBtn.style.display = 'block';
+                goToTopTextBtn.style.display = 'none';
+                currentStyle = 'icon';
+            }
+            
+           
+            window.dispatchEvent(new Event('scroll'));
+        }
+
+    </script>
+
+	
+	
+	
+	
+	
+	
+   
+  
+  
+</body>
+</html>

@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+ <title>Morning Muse Cafe-Drink Menu</title>
+
+</head>
+<body>
+
+
+<head>
+
+ <style>
+	 {
+	  padding: 0;
+	  margin: 0;
+	  box-sizing: border-box;
+	  font-family: Arial, sans-serif;
+	}
+
+	body {
+	  background-color: #FFFFFF;
+	  padding-bottom: 50px;
+	}
+
+	.navbar {
+	  display: flex;
+	  justify-content: space-between;
+	  align-items: center;
+	  background-color: #DEAA79;
+	  padding: 10px 50px;
+	  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+	}
+
+	.navbar img {
+	  width: 55px;
+	  height: 50px;
+	  border-radius: 50%;
+	}
+
+	nav ul {
+	  list-style: none;
+	  display: flex;
+	  gap: 20px;
+	  align-items: center;
+	}
+
+	nav ul li {
+	  position: relative;
+	}
+
+	nav ul li a {
+	  display: block;
+	  padding: 10px 15px;
+	  color: white;
+	  text-decoration: none;
+	  font-weight: bold;
+	  border-radius: 5px;
+	  transition: background 0.3s, color 0.3s;
+	  background-color: #DEAA79;
+	}
+
+	nav ul li a:hover {
+	  background-color: #f4a460;
+	  color: black;
+	}
+
+	.dropdown {
+	  display: none;
+	  position: absolute;
+	  background-color: #DEAA79;
+	  top: 100%;
+	  left: 0;
+	  min-width: 160px;
+	  z-index: 1;
+	  flex-direction: column;
+	}
+
+	.dropdown li {
+	  display: block;
+	}
+
+	nav ul li:hover .dropdown {
+	  display: block;
+	}
+
+	.content-section {
+	  display: none;
+	  padding: 40px 20px;
+	  max-width: 800px;
+	  margin: 30px auto;
+	  background-color: #fff8f0;
+	  border-radius: 10px;
+	  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+	}
+
+	.content-section.active {
+	  display: block;
+	}
+
+	.content-section h2 {
+	  color: #6b3e26;
+	  margin-bottom: 15px;
+	}
+
+	.content-section p {
+	  color: #333;
+	  line-height: 1.6;
+	}
+
+
+	form {
+	  display: flex;
+	  flex-direction: column;
+	  gap: 15px;
+	  margin-top: 20px;
+	}
+
+	input[type="text"],
+	input[type="email"],
+	textarea {
+	  padding: 10px;
+	  font-size: 1em;
+	  border: 1px solid #ccc;
+	  border-radius: 5px;
+	  width: 100%;
+	}
+
+	button[type="submit"] {
+	  background-color: #DEAA79;
+	  color: white;
+	  padding: 12px;
+	  border: none;
+	  border-radius: 8px;
+	  font-weight: bold;
+	  cursor: pointer;
+	  transition: background-color 0.3s;
+	}
+
+	button[type="submit"]:hover {
+	  background-color: #c48a54;
+	}
+
+	footer {
+	  background-color: #DEAA79;
+	  border-top: 1px solid #ccc;
+	  padding: 40px 20px 20px;
+	  font-family: Arial, sans-serif;
+	}
+
+	.footer-container {
+	  display: flex;
+	  flex-wrap: wrap;
+	  justify-content: space-between;
+	  align-items: flex-start;
+	  max-width: 1200px;
+	  margin: auto;
+	}
+
+	.footer-logo img {
+	  width: 50px;
+	  border-radius: 20%;
+	}
+
+	.footer-links {
+	  display: flex;
+	  flex-wrap: wrap;
+	  gap: 60px;
+	  flex-grow: 1;
+	  justify-content: flex-end;
+	}
+
+	.footer-column h3 {
+	  font-size: 1.1em;
+	  margin-bottom: 15px;
+	  font-weight: bold;
+	  color: #333;
+	}
+
+	.footer-column ul {
+	  list-style: none;
+	  padding: 0;
+	}
+
+	.footer-column ul li {
+	  margin-bottom: 10px;
+	}
+
+	.footer-column ul li a {
+	  color: #333;
+	  text-decoration: none;
+	  font-size: 0.95em;
+	}
+
+	.footer-column ul li a:hover {
+	  text-decoration: underline;
+	}
+
+	.footer-bottom {
+	  border-top: 1px solid #eee;
+	  margin-top: 30px;
+	  padding-top: 15px;
+	  text-align: center;
+	  font-size: 0.85em;
+	  color: #555;
+	  font-weight: bold;
+	}
+</style>
+
+
+</head>
+<body>
+
+<div class="navbar">
+ <img src="Muse Coffee.jpg" alt="Cafe Logo">
+<nav>
+     <ul>
+  <li><a href="index.html">Home</a></li>
+
+  <li>
+    <a href="about.html">About Us</a>
+    <ul class="dropdown">
+      <li><a href="our story.html">Journey</a></li>
+    </ul>
+  </li>
+
+  <li>
+    <a href="menu-food.html">Food</a>
+    <ul class="dropdown">
+      <li><a href="hot-meals.html">Hot Meals</a></li>
+      <li><a href="snacks.html">Snacks</a></li>
+      <li><a href="dessert.html">Dessert</a></li>
+      <li><a href="pastries.html">Pastries</a></li>
+      <li><a href="cookies.html">Cookies</a></li>
+      <li><a href="ice-cream.html">Ice Cream</a></li>
+    </ul>
+  </li>
+
+ <li>
+	<a href="menu-drinks.html">Drinks</a>
+	<ul class="dropdown">
+      <li><a href="frappe.html">Frappe</a></li>
+      <li><a href="coffee.html">Coffee</a></li>
+      <li><a href="hot-drinks-and-juice.html">Hot Drinks and Juice</a></li>
+      <li><a href="iced-beverage.html">Iced Beverage</a></li>
+      <li><a href="specialty-drinks.html">Specialty Drinks</a></li>
+    </ul>
+	</li>
+	
+  <li><a href="location.html">Location</a></li>
+  <li><a href="feedback.html">Feedback</a></li>
+  <li><a href="contact.html">Contact</a></li>
+  <li><a href="cart.html">Add to Cart</a></li>
+</ul>
+</nav>
+</div>
+
+
+
+
+<section id="home" class="content-section active">
+  	<h2>Welcome to Morning Muse Cafe</h2>
+  	<p>Your perfect spot to sip, relax, and get inspired every morning.</p>
+</section>
+
+<section id="about" class="content-section active">
+  	<h2>About Us</h2>
+  	<p>We are a locally-owned coffee shop with a passion for creating cozy spaces and serving quality brews.</p>
+</section>
+
+<section id="food" class="content-section">
+  	<h2>Our Food</h2>
+  	<p>Delicious pastries, hearty breakfasts, and daily specials made with love.</p>
+</section>
+
+<section id="drinks" class="content-section active">
+  	<h2>Our Drinks</h2>
+  	<p>From classic espresso to refreshing iced lattes — brewed fresh daily.</p>
+</section>
+
+<section id="location" class="content-section active">
+  	<h2>Our Location</h2>
+  	<p>Come find us at 190, Jalan Tuanku Abdul Rahman, City Centre, 50100 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur. Open daily 8:00 AM - 10:00 PM.</p>
+	<p>Find us at second branch, Lot 45, Jalan Sultan Yahya Petra,15200 Kota Bharu, Kelantan. Open daily 8:30 AM - 11:00 PM.</p>
+	<p>Our third branch, No. 12, Jalan Lagenda Heights 2,08000 Sungai Petani, Kedah. Open daily 8AM - 10PM.</p>
+</section>
+
+<section id="feedback" class="content-section active">
+  	<h2>Feedback</h2>
+  	<p>We'd love to hear from you! Share your experience and help us grow better.</p>
+</section>
+
+<section id="contact" class="content-section active">
+  	<h2>Get in Touch</h2>
+  	<p>Phone: +60 0000</p>
+  	<p>Email: hello@ourcafe.com</p>
+  	<p>Address: 123 Café Street, Kuala Lumpur, Malaysia</p>
+
+  <h3>Send Us a Message</h3>
+  <form>
+	<label for="name">Your Name:</label>
+      	<input type="text" id="name" name="name" required>
+
+      	<label for="email">Your Email:</label>
+      	<input type="email" id="email" name="email" required>
+
+      	<label for="message">Your Message:</label>
+      	<textarea id="message" name="message" rows="5" required></textarea>
+
+      	<button type="submit">Send Message</button>
+  </form>
+</section>
+
+<footer>
+  <div class="footer-container">
+    <div class="footer-logo">
+      <img src="Muse Coffee.jpg" alt="Logo">
+    </div>
+    <div class="footer-links">
+      <div class="footer-column">
+        <h3>Our Company</h3>
+        <ul>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">Our Story</a></li>
+          <li><a href="#">Franchising</a></li>
+          <li><a href="#">Store Locator</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h3>Site Terms</h3>
+        <ul>
+          <li><a href="#">Terms of Use</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Do Not Sell Info</a></li>
+          <li><a href="#">Legal Notice</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h3>Customer Care</h3>
+        <ul>
+          <li><a href="#" onclick="showSection('contact')">Contact Us</a></li>
+          <li><a href="#">Returns</a></li>
+          <li><a href="#">Shipping</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2025 Morning Muse Cafe. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+	function showSection(id) {
+  	const sections = document.querySelectorAll('.content-section');
+  	sections.forEach(section => {
+	    section.classList.remove('active');
+  	});
+  	const target = document.getElementById(id);
+  	if (target) target.classList.add('active');
+	}
+</script>
+
+
+ <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+        }
+
+ 
+        .go-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background-color: #00704a; /* Starbucks green */
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            font-size: 18px;
+            cursor: pointer;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+            transition: all 0.3s ease;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(20px);
+            z-index: 1000;
+        }
+
+        .go-to-top.visible {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .go-to-top:hover {
+            background-color: #005a3a;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.4);
+        }
+
+        .go-to-top:active {
+            transform: translateY(0);
+        }
+
+
+        .go-to-top::before {
+            content: '↑';
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .go-to-top-text {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background-color: #00704a;
+            color: white;
+            border: none;
+            border-radius: 25px;
+            padding: 10px 20px;
+            font-size: 14px;
+            font-weight: bold;
+            cursor: pointer;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+            transition: all 0.3s ease;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(20px);
+            z-index: 1000;
+            display: none; /* Hidden by default, toggle with JavaScript */
+        }
+
+        .go-to-top-text.visible {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .go-to-top-text:hover {
+            background-color: #005a3a;
+            transform: translateY(-2px);
+        }
+
+       
+    </style>
+
+
+
+ <button class="go-to-top" id="goToTopBtn" onclick="scrollToTop()" title="Go to top"></button>
+    <button class="go-to-top-text" id="goToTopTextBtn" onclick="scrollToTop()" title="Go to top">
+        ↑ GO TO TOP
+    </button>
+
+    <script>
+        const goToTopBtn = document.getElementById('goToTopBtn');
+        const goToTopTextBtn = document.getElementById('goToTopTextBtn');
+        let currentStyle = 'icon'; 
+
+        window.addEventListener('scroll', function() {
+            if (window.pageYOffset > 300) {
+                if (currentStyle === 'icon') {
+                    goToTopBtn.classList.add('visible');
+                } else {
+                    goToTopTextBtn.classList.add('visible');
+                }
+            } else {
+                goToTopBtn.classList.remove('visible');
+                goToTopTextBtn.classList.remove('visible');
+            }
+        });
+
+       
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+
+        
+        function toggleButtonStyle() {
+            if (currentStyle === 'icon') {
+                goToTopBtn.style.display = 'none';
+                goToTopTextBtn.style.display = 'block';
+                currentStyle = 'text';
+            } else {
+                goToTopBtn.style.display = 'block';
+                goToTopTextBtn.style.display = 'none';
+                currentStyle = 'icon';
+            }
+            
+           
+            window.dispatchEvent(new Event('scroll'));
+        }
+
+    </script>
+
+
+
+</body>
+</html>
