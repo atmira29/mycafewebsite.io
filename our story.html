@@ -1,0 +1,809 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+
+
+	<title>Muse Cafe </title>
+
+</head>
+<body>
+
+
+		<style>
+ {
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box;
+   font-family: Arial, sans-serif;
+ }
+
+ body {
+   background-color: #FFFFFF;
+ }
+
+ .navbar {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   background-color: #DEAA79;
+   padding: 10px 50px;
+   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+ }
+
+ .navbar img {
+   width: 55px;
+   height: 50px;
+   height: auto;
+   border-radius: 50%;
+ }
+
+ nav ul {
+   list-style: none;
+   display: flex;
+   gap: 20px;
+   align-items: center;
+ }
+
+ nav ul li {
+   position: relative;
+ }
+
+ nav ul li a {
+   display: block;
+   padding: 10px 15px;
+   color: white;
+   text-decoration: none;
+   font-weight: bold;
+   border-radius: 5px;
+   transition: background 0.3s;
+   background-color: #DEAA79;
+ }
+
+ nav ul li a:hover {
+   background-color: #f4a460;
+   color: black;
+ }
+
+ .dropdown {
+   display: none;
+   position: absolute;
+   background-color: #DEAA79;
+   top: 100%;
+   left: 0;
+   min-width: 160px;
+   z-index: 1;
+   flex-direction: column;
+    max-height: 300px; 
+   overflow-y: auto;  
+ }
+
+ .dropdown li {
+   display: block;
+ }
+
+ nav ul li:hover .dropdown {
+   display: block;
+ }
+
+ .rounded-img {
+   border-radius: 30px;
+   margin: 10px;
+ }
+
+ .content-section {
+   display: none;
+   padding: 20px;
+ }
+
+ .content-section.active {
+   display: block;
+ }
+
+ .menu-section {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+   gap: 20px;
+   padding: 20px;
+   background-color: #FFFFFF; 
+   border-radius: 20px;
+   margin: 30px;
+ }
+
+ .menu-item {
+   background-color: #fff8ee; 
+   border-radius: 10px;
+   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+   width: 250px;
+   text-align: center;
+   padding: 15px;
+ }
+
+ .menu-item img {
+   width: 100%;
+   height: 200px;
+   object-fit: cover;
+   border-radius: 10px;
+ }
+
+ .menu-item h3 {
+   margin: 10px 0 5px;
+   font-size: 1.2em;
+   color: #4B2E1F;
+ }
+
+ .menu-item p {
+   color: #555;
+   font-size: 0.9em;
+ }
+
+ .menu-item .price {
+   margin-top: 10px;
+   font-weight: bold;
+   color: #F4A460;
+ }
+
+ 
+
+</style>
+
+
+</head>
+<body>
+
+<div class="navbar">
+ <img src="Muse Coffee.jpg" alt="Cafe Logo">
+<nav>
+     <ul>
+  <li><a href="index.html">Home</a></li>
+
+  <li>
+    <a href="about.html">About Us</a>
+    <ul class="dropdown">
+      <li><a href="our story.html">Journey</a></li>
+    </ul>
+  </li>
+
+  <li>
+    <a href="menu-food.html">Food</a>
+    <ul class="dropdown">
+      <li><a href="hot-meals.html">Hot Meals</a></li>
+      <li><a href="snacks.html">Snacks</a></li>
+      <li><a href="dessert.html">Dessert</a></li>
+      <li><a href="pastries.html">Pastries</a></li>
+      <li><a href="cookies.html">Cookies</a></li>
+      <li><a href="ice cream.html">Ice Cream</a></li>
+    </ul>
+  </li>
+
+  <li>
+	<a href="menu-drinks.html">Drinks</a>
+	<ul class="dropdown">
+      <li><a href="frappe.html">Frappe</a></li>
+      <li><a href="coffee.html">Coffee</a></li>
+      <li><a href="hot-drinks-and-juice.html">Hot Drinks and Juice</a></li>
+      <li><a href="iced-beverage.html">Iced Beverage</a></li>
+      <li><a href="specialty-drinks.html">Specialty Drinks</a></li>
+    </ul>
+	</li>
+	
+  <li><a href="location.html">Location</a></li>
+  <li><a href="feedback.html">Feedback</a></li>
+  <li><a href="contact.html">Contact</a></li>
+  <li><a href="cart.html">Add to Cart</a></li>
+</ul>
+</nav>
+</div>
+
+
+  
+  
+  <style>
+         {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'PlayFair Display', serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+
+        header {
+            background: #deea79;
+            color: white;
+            padding: 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+            position: relative;
+            z-index: 10;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 300;
+            letter-spacing: 2px;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 300;
+            transition: opacity 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            opacity: 0.8;
+        }
+
+ 
+        .hero {
+            text-align: center;
+            padding: 4rem 2rem 6rem;
+            position: relative;
+            z-index: 5;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: -50px;
+            right: -100px;
+            width: 300px;
+            height: 300px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            z-index: -1;
+        }
+
+        .hero-subtitle {
+            font-size: 1.5rem;
+            opacity: 0.9;
+            margin-bottom: 1rem;
+            font-weight: 500;
+			font-family: 'Lobster', cursive; 
+        }
+
+        .hero-title {
+            font-size: 2.5rem;
+            font-weight: 300;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+			font-family: 'Playfair', serif;
+        }
+
+        .hero-description {
+            font-size: 1rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
+            font-weight: 300;
+            line-height: 1.6;
+        }
+
+  
+        main {
+            background: #f8fafc;
+            padding: 4rem 2rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2rem;
+            font-weight: 400;
+            margin-bottom: 3rem;
+            color: #1e293b;
+			font-family: 'Lobster', cursive;
+        }
+
+        .story-content {
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 1rem;
+            line-height: 1.8;
+            color: #475569;
+            margin-bottom: 4rem;
+        }
+
+        .story-content p {
+            margin-bottom: 1.5rem;
+        }
+
+  
+        .coffee-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .team-member {
+            background: white;
+            border-radius: 10px;
+            padding: 1rem;
+            text-align: center;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .team-coffee:hover {
+            transform: translateY(-5px);
+           
+        }
+
+        .bean-photo {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+			display: block;
+			margin: 0 auto 1rem auto;
+           
+        }
+
+		.bean-name {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #1e293b;
+            margin-bottom: 0.3rem;
+        }
+
+        .type-beans {
+            font-size: 0.9rem;
+            color: #64748b;
+          
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 0.5rem;
+        }
+
+        .social-link {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            background: #f1f5f9;
+            color: #64748b;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+        }
+
+        .social-link:hover {
+            background: #2563eb;
+            color: white;
+        }
+
+       
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .hero-title {
+                font-size: 2rem;
+            }
+
+            .hero {
+                padding: 3rem 1rem 4rem;
+            }
+
+            main {
+                padding: 3rem 1rem;
+            }
+
+            .team-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+       
+
+			
+    </style>
+
+  
+ <head>
+ <body>
+  
+  
+   <div class="hero">
+            <div class="hero-subtitle">Our Journey</div>
+            <h1 class="hero-title">The conviction in our mission</h1>
+            <p class="hero-description">
+                 This cafe website began as part of a course project a creative challenge that turned into something we truly enjoyed building. 
+		While it started from a requirement, it quickly became more than that: 
+		a chance to design a space that reflects warmth, good vibes, and a love for coffee culture. 
+            </p>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <h2 class="section-title">Our Story<span>&#9749;</span></h2>
+            
+            <div class="story-content">
+                <p>
+                     We imagined a café that serves rich Arabica beans sourced from Colombia and Ethiopia, known for their smooth, bold flavor. 
+			Whether real or imagined, this site is a celebration of what a cozy café could be welcoming, peaceful, and brewed with care.
+                </p>
+                
+                <p>
+                      At this website was originally created as a course assignment, but it reflects our love for coffee and good design. 
+			We imagined a cafe that uses only the best Arabica beans, with a calm and welcoming vibe for everyone who walks in. 
+			It’s a small project with a big heart just like the perfect cup of coffee.
+                </p>
+            </div>
+
+            <h2 class="section-title"><span>&#9749;</span> Type of Beans<span>&#10024;</span> </h2>
+            
+            <div class="coffee-grid">
+                <div class="team-coffee">
+                    <img src="arabica.jpg" alt="beans 1" class="coffee bean-photo">
+                    <h3 class="member-name">Arabica coffee bean</h3>
+                    <p class="member-role">Unique beans</p>
+                    
+                </div>
+
+		<div class="team-coffee">
+                    <img src="robusta.jpg" alt="bean 2" class="coffee bean-photo">
+                    <h3 class="beans-name">Robusta coffee bean</h3>
+                    <p class="type-beans">Classic beans</p>
+                   
+                </div>
+
+                <div class="team-coffee">
+                    <img src="excelsa.jpg" alt="bean 3" class="coffee bean-photo">
+                    <h3 class="beans-name">Excelsa coffee bean</h3>
+                    <p class="type-beans">Rare beans</p>
+                   
+                </div>
+
+                 <div class="team-coffee">
+                    <img src="liberica.jpg" alt="bean 4" class="coffee bean-photo">
+                    <h3 class="beans-name">Liberica coffee bean</h3>
+                    <p class="type-beans">Legend beans</p>
+            </div>
+        </div>
+
+<br><br><br>
+
+
+<style>
+     {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f5f5f5;
+    }
+
+    footer {
+      background-color: #deaa79;
+      padding-top: 60px;
+      position: relative;
+    }
+
+    .footer-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 40px;
+    }
+
+    .footer-content {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 40px;
+      padding-bottom: 40px;
+      border-bottom: 1px solid #a0a6ac;
+    }
+
+    .footer-column h3 {
+      font-size: 16px;
+      font-weight: 700;
+      margin-bottom: 20px;
+      letter-spacing: 0.5px;
+      color: #1e1e1e;
+    }
+
+    .footer-column ul {
+      list-style: none;
+    }
+
+    .footer-column ul li {
+      margin-bottom: 12px;
+    }
+
+    .footer-column ul li a {
+      color: #4a4a4a;
+      text-decoration: none;
+      font-size: 14px;
+      transition: color 0.3s ease;
+    }
+
+    .footer-column ul li a:hover {
+      color: #1e1e1e;
+    }
+
+    .center-footer {
+      text-align: center;
+      margin-top: 30px;
+    }
+
+    .center-footer img {
+      width: 35px;
+      height: auto;
+      margin-bottom: 10px;
+    }
+
+    .center-footer p {
+      font-size: 14px;
+      color: #4a2c2a;
+      font-weight: bold;
+    }
+
+    @media (max-width: 768px) {
+      .footer-content {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+      }
+
+      .footer-container {
+        padding: 0 20px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .footer-content {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+    }
+  </style>
+  
+</head>
+<body>
+
+  <footer>
+    <div class="footer-container">
+
+    
+      <div class="footer-content">
+        <div class="footer-column">
+          <h3>ABOUT US</h3>
+          <ul>
+            <li><a href="#">Our Journey</a></li>
+            <li><a href="#">Our Gallery</a></li>
+            <li><a href="#">Team Member</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h3>COFFEE</h3>
+          <ul>
+            <li><a href="#">Our Coffee</a></li>
+            <li><a href="#">Brewing Guides</a></li>
+            <li><a href="#">Ethical Sourcing</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h3>MENU</h3>
+          <ul>
+            <li><a href="#">Drinks</a></li>
+            <li><a href="#">Food</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h3>SITE TERMS</h3>
+          <ul>
+            <li><a href="#">Terms of Use</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Do Not Sell Info</a></li>
+            <li><a href="#">Legal Notice</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h3>CUSTOMER SERVICE</h3>
+          <ul>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">Returns</a></li>
+            <li><a href="#">Delivery</a></li>
+            <li><a href="#">FAQ's</a></li>
+          </ul>
+        </div>
+      </div>
+
+  
+      <div class="center-footer">
+        <a href="https://www.instagram.com/morningmusecoffee25" target="_blank">
+          <img src="ig logo.jpg" alt="Instagram">
+        </a>
+        <p>&copy; 2025 Morning Muse Cafe. All rights reserved.</p>
+      </div>
+
+    </div>
+  </footer>
+  
+
+  
+  
+ <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+        }
+
+ 
+        .go-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background-color: #00704a; 
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            font-size: 18px;
+            cursor: pointer;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+            transition: all 0.3s ease;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(20px);
+            z-index: 1000;
+        }
+
+        .go-to-top.visible {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .go-to-top:hover {
+            background-color: #005a3a;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.4);
+        }
+
+        .go-to-top:active {
+            transform: translateY(0);
+        }
+
+
+        .go-to-top::before {
+            content: '↑';
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .go-to-top-text {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background-color: #00704a;
+            color: white;
+            border: none;
+            border-radius: 25px;
+            padding: 10px 20px;
+            font-size: 14px;
+            font-weight: bold;
+            cursor: pointer;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+            transition: all 0.3s ease;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(20px);
+            z-index: 1000;
+            display: none; 
+        }
+
+        .go-to-top-text.visible {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .go-to-top-text:hover {
+            background-color: #005a3a;
+            transform: translateY(-2px);
+        }
+
+       
+    </style>
+
+
+
+ <button class="go-to-top" id="goToTopBtn" onclick="scrollToTop()" title="Go to top"></button>
+    <button class="go-to-top-text" id="goToTopTextBtn" onclick="scrollToTop()" title="Go to top">
+        ↑ GO TO TOP
+    </button>
+
+    <script>
+        const goToTopBtn = document.getElementById('goToTopBtn');
+        const goToTopTextBtn = document.getElementById('goToTopTextBtn');
+        let currentStyle = 'icon'; 
+
+        window.addEventListener('scroll', function() {
+            if (window.pageYOffset > 300) {
+                if (currentStyle === 'icon') {
+                    goToTopBtn.classList.add('visible');
+                } else {
+                    goToTopTextBtn.classList.add('visible');
+                }
+            } else {
+                goToTopBtn.classList.remove('visible');
+                goToTopTextBtn.classList.remove('visible');
+            }
+        });
+
+       
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+
+        
+        function toggleButtonStyle() {
+            if (currentStyle === 'icon') {
+                goToTopBtn.style.display = 'none';
+                goToTopTextBtn.style.display = 'block';
+                currentStyle = 'text';
+            } else {
+                goToTopBtn.style.display = 'block';
+                goToTopTextBtn.style.display = 'none';
+                currentStyle = 'icon';
+            }
+            
+           
+            window.dispatchEvent(new Event('scroll'));
+        }
+
+    </script>
+
+	
+
+	
+
+</body>
+</html>
+
+  
+  
+ 

@@ -1,0 +1,774 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+ <title>Morning Muse Cafe-Drink Menu</title>
+
+</head>
+<body>
+
+
+
+
+<style>
+ {
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box;
+   font-family: Arial, sans-serif;
+ }
+
+ body {
+   background-color: #FFFFFF;
+ }
+
+ .navbar {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   background-color: #DEAA79;
+   padding: 10px 50px;
+   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+ }
+
+ .navbar img {
+   width: 55px;
+   height: 50px;
+   height: auto;
+   border-radius: 50%;
+ }
+
+ nav ul {
+   list-style: none;
+   display: flex;
+   gap: 20px;
+   align-items: center;
+ }
+
+ nav ul li {
+   position: relative;
+ }
+
+ nav ul li a {
+   display: block;
+   padding: 10px 15px;
+   color: white;
+   text-decoration: none;
+   font-weight: bold;
+   border-radius: 5px;
+   transition: background 0.3s;
+   background-color: #DEAA79;
+ }
+
+ nav ul li a:hover {
+   background-color: #f4a460;
+   color: black;
+ }
+
+ .dropdown {
+   display: none;
+   position: absolute;
+   background-color: #DEAA79;
+   top: 100%;
+   left: 0;
+   min-width: 160px;
+   z-index: 1;
+   flex-direction: column;
+    max-height: 300px; 
+   overflow-y: auto;  
+ }
+
+ .dropdown li {
+   display: block;
+ }
+
+ nav ul li:hover .dropdown {
+   display: block;
+ }
+
+ .rounded-img {
+   border-radius: 30px;
+   margin: 10px;
+ }
+
+ .content-section {
+   display: none;
+   padding: 20px;
+ }
+
+ .content-section.active {
+   display: block;
+ }
+
+ .menu-section {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+   gap: 20px;
+   padding: 20px;
+   background-color: #FFFFFF; 
+   border-radius: 20px;
+   margin: 30px;
+ }
+
+ .menu-item {
+   background-color: #fff8ee; 
+   border-radius: 10px;
+   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+   width: 250px;
+   text-align: center;
+   padding: 15px;
+ }
+
+ .menu-item img {
+  width: 100%;
+   height: auto;
+   max-height: 520px;
+   object-fit: contain;
+   border-radius: 10px;
+   display: block;
+	margin: 0 auto;
+ }
+
+ .menu-item h3 {
+   margin: 10px 0 5px;
+   font-size: 1.2em;
+   color: #4B2E1F;
+ }
+
+ .menu-item p {
+   color: #555;
+   font-size: 0.9em;
+ }
+
+ .menu-item .price {
+   margin-top: 10px;
+   font-weight: bold;
+   color: #F4A460;
+ }
+  .menu-link {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 8px 16px;
+  background-color: #DEAA79;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+
+.menu-link:hover {
+  background-color: #f4a460;
+  color: black;
+}
+
+ footer {
+   background-color: #DEAA79;
+   border-top: 1px solid #ccc;
+   padding: 40px 100px 20px;
+   font-family: Arial, sans-serif;
+ }
+
+ .footer-container {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-between;
+   align-items: flex-start;
+   max-width: 1200px;
+   margin: auto;
+ }
+
+ .footer-logo img {
+   width: 50px;
+   border-radius: 20%;
+ }
+
+ .footer-links {
+   display: flex;
+   flex-wrap: wrap;
+   gap: 100px;
+   flex-grow: 1;
+   justify-content: flex-end;
+ }
+
+ .footer-column h3 {
+   font-size: 1.1em;
+   margin-bottom: 15px;
+   font-weight: bold;
+   color: #333;
+ }
+
+ .footer-column ul {
+   list-style: none;
+   padding: 0;
+ }
+
+ .footer-column ul li {
+   margin-bottom: 10px;
+ }
+
+ .footer-column ul li a {
+   color: #333;
+   text-decoration: none;
+   font-size: 0.95em;
+ }
+
+ .footer-column ul li a:hover {
+   text-decoration: underline;
+ }
+
+ .footer-bottom {
+   border-top: 1px solid #eee;
+   margin-top: 5px;
+   padding-top: 5px;
+   text-align: center;
+   font-size: 0.85em;
+   color: #555;
+ }
+
+</style>
+
+
+</head>
+<body>
+
+<div class="navbar">
+ <img src="Muse Coffee.jpg" alt="Cafe Logo">
+ <nav>
+   <ul>
+  <li><a href="index.html">Home</a></li>
+
+  <li>
+    <a href="about.html">About Us</a>
+    <ul class="dropdown">
+      <li><a href="our story.html">Journey</a></li>
+    </ul>
+  </li>
+
+  <li>
+    <a href="menu-food.html">Food</a>
+    <ul class="dropdown">
+      <li><a href="hot-meals.html">Hot Meals</a></li>
+      <li><a href="snacks.html">Snacks</a></li>
+      <li><a href="dessert.html">Dessert</a></li>
+      <li><a href="pastries.html">Pastries</a></li>
+      <li><a href="cookies.html">Cookies</a></li>
+      <li><a href="ice-cream.html">Ice Cream</a></li>
+    </ul>
+  </li>
+
+<li>
+	<a href="menu-drinks.html">Drinks</a>
+	<ul class="dropdown">
+      <li><a href="frappe.html">Frappe</a></li>
+      <li><a href="coffee.html">Coffee</a></li>
+      <li><a href="hot-drinks-and-juice.html">Hot Drinks and Juice</a></li>
+      <li><a href="iced-beverage.html">Iced Beverage</a></li>
+      <li><a href="specialty-drinks.html">Specialty Drinks</a></li>
+    </ul>
+	</li>
+	
+  <li><a href="location.html">Location</a></li>
+  <li><a href="feedback.html">Feedback</a></li>
+  <li><a href="contact.html">Contact</a></li>
+  <li><a href="cart.html">Add to Cart</a></li>
+</ul>
+</nav>
+</div>
+
+
+
+<div id="hotmeals" class="content-section active">
+ <h2 style="text-align:center; margin-top: 30px;">Our Hot Meals</h2>
+ <div class="menu-section">
+  <div class="menu-item"><img src="carbonara.jpg" alt="carbonara" class="myImg"><h3>Spaghetti Carbonara</h3><p>Rich, creamy pasta with tender chicken and a cheesy finish.</p>
+<div class="price">RM9.00</div></div>
+
+  <div class="menu-item"><img src="bolognese.jpg" alt="bolognese" class="myImg"><h3>Spaghetti Bolognese</h3><p>Classic pasta tossed in rich, meaty tomato sauce.</p>
+<div class="price">RM9.00</div></div>
+
+  <div class="menu-item"><img src="aglioolio.jpg" alt="aglioolio" class="myImg"><h3>Spaghetti Aglio Olio</h3><p>Spaghetti sautéed in garlic, olive oil, and chili flakes for a simple yet bold flavor.</p>
+<div class="price">RM10.00</div></div>
+
+  <div class="menu-item"><img src="maccheese.jpg" alt="maccheese" class="myImg"><h3>Mac and Cheese</h3><p>Creamy macaroni baked with a golden layer of melted cheese.</p>
+<div class="price">RM9.00</div></div>
+
+  <div class="menu-item"><img src="chickenchop.jpg" alt="chickenchop" class="myImg"><h3>Chicken Chop</h3><p>Juicy grilled chicken served with black pepper sauce and sides.</p>
+<div class="price">RM12.00</div></div>
+
+      <div class="menu-item"><img src="chickenwrap.jpg" alt="chickengrilledwraps" class="myImg"><h3>Chicken Grilled Wraps</h3><p>Grilled chicken, fresh veggies, and sauce wrapped in a soft tortilla.</p>
+<div class="price">RM11.00</div></div>
+
+	  <div class="menu-item"><img src="lasagna.jpg" alt="lasagna" class="myImg"><h3>Lasagna</h3><p>Layered pasta with rich meat sauce, creamy béchamel, and melted cheese.</p>
+<div class="price">RM13.00</div></div>
+
+	   <div class="menu-item"><img src="fishchip.jpg" alt="fishchip" class="myImg"><h3>Fish and Chip</h3><p>Crispy battered fish served with golden fries and tartar sauce.</p>
+<div class="price">RM12.00</div></div>
+
+      <div class="menu-item"><img src="chickenrice.jpg" alt="chickenrice" class="myImg"><h3>Chicken Rice</h3><p>Steamed fragrant rice served with tender, flavorful chicken and dipping sauce.</p>
+<div class="price">RM8.00</div></div>
+
+      <div class="menu-item"><img src="nasilemak.jpg" alt="nasilemak" class="myImg"><h3>Nasi Lemak</h3><p>Fragrant coconut rice served with sambal, egg, peanuts, and anchovies.</p>
+<div class="price">RM7.00</div></div>
+
+      <div class="menu-item"><img src="nasikerabu.jpg" alt="nasikerabu" class="myImg"><h3>Nasi Kerabu</h3><p>Blue-tinted rice with herbs, vegetables, salted egg, and spiced sauce.</p>
+<div class="price">RM8.00</div></div>
+ </div>
+</div>
+
+<div id="snacks" class="content-section active">
+ <h2 style="text-align:center; margin-top: 30px;">Our Snacks</h2>
+ <div class="menu-section">
+  <div class="menu-item"><img src="fries.jpg" alt="fries" class="myImg"><h3>Fries</h3><p>Golden and crispy fries served with a side of sauce.</p>
+<div class="price">RM6.00</div></div>
+
+  <div class="menu-item"><img src="nuggets.jpg" alt="nugget" class="myImg"><h3>Chicken Nuggets</h3><p>Crunchy bite-sized chicken pieces, perfect for dipping and sharing.</p>
+<div class="price">RM6.00</div></div>
+
+  <div class="menu-item"><img src="cheseeball.jpg" alt="potato" class="myImg"><h3>Potato Cheese Balls</h3><p>Soft baked potatoes smothered in rich, creamy cheese sauce.</p>
+<div class="price">RM7.00</div></div>
+
+  <div class="menu-item"><img src="waffles.jpg" alt="waffles" class="myImg"><h3>Waffles</h3><p>Golden waffles served warm with syrup or your favorite toppings.</p>
+<div class="price">RM4.50</div></div>
+
+   <div class="menu-item"><img src="churros.jpg" alt="churos" class="myImg"><h3>churos</h3><p>Crunchy on the outside, soft inside, coated with cinnamon sugar.</p>
+<div class="price">RM7.50</div></div>
+
+      <div class="menu-item"><img src="samosa.jpg"alt="samosa"class="myImg"><h3>Samosa</h3><p>Vegetable-filled rolls wrapped and fried to crispy perfection.</p>
+<div class="price">RM7.00</div></div>
+ </div>
+</div>
+
+<div id="desserts" class="content-section active">
+ <h2 style="text-align:center; margin-top: 30px;">Our Desserts</h2>
+ <div class="menu-section">
+  <div class="menu-item"><img src="chocolatecake.jpg" alt="chocolatecake" class="myImg"><h3>Chocolate Cakes</h3><p>Decadent chocolate cake with rich, velvety frosting.</p>
+<div class="price">RM5.00 per slice</div></div>
+
+  <div class="menu-item"><img src="strawberrycake.jpg" alt="strawberrycake" class="myImg"><h3>Strawberry Sponge Cakes</h3><p>Fluffy cake layered with fresh strawberries and whipped cream.</p>
+<div class="price">RM6.00 per slice</div></div>
+
+  <div class="menu-item"><img src="redvelvet.jpg" alt="redvelvet" class="myImg"><h3>Red Velvet Cakes</h3><p>Moist red velvet layers with a smooth cream cheese frosting.</p>
+<div class="price">RM5.00 per slice</div></div>
+
+  <div class="menu-item"><img src="cheesecakes.jpg" alt="cheesecakes"class="myImg"><h3>Cheese Cakes</h3><p>Creamy and rich cheesecake on a buttery biscuit crust.</p>
+<div class="price">RM7.00 per slice</div></div>
+
+  <div class="menu-item"><img src="tiramisu.jpg" alt="tiramisu"class="myImg"><h3>Tiramisu Cakes</h3><p>Layers of coffee-soaked sponge and mascarpone with a cocoa dusting.</p>
+<div class="price">RM7.00</div></div>
+
+  <div class="menu-item"><img src="brownies.jpg" alt="brownies"class="myImg"><h3>Brownies</h3><p>Rich, fudgy chocolate brownie with a moist and chewy center.</p>
+<div class="price">RM6.00</div></div>
+
+  <div class="menu-item"><img src="muffin.jpg" alt="muffin"class="myImg"><h3>Muffin</h3><p>Soft and fluffy muffins, perfect for a sweet bite anytime.</p>
+
+  <div class="price">RM4.00</div></div>
+  <div class="menu-item"><img src="chocolatemuffin.jpg" alt="chocolatemuffin"class="myImg"><h3>Chocolate Muffin</h3><p>Soft and fluffy cupcakes with sweet frosting and fun toppings.</p>
+<div class="price">RM4.00</div></div>
+   </div>
+</div>
+
+<div id="pastries" class="content-section active">
+ <h2 style="text-align:center; margin-top: 30px;">Our Pastries</h2>
+ <div class="menu-section">
+  <div class="menu-item"><img src="croissant.jpg" alt="croissant"class="myImg"><h3>Chocolate Croissant</h3><p>Flaky and buttery layers baked to golden perfection.</p>
+<div class="price">RM4.00</div></div>
+
+  <div class="menu-item"><img src="cheesetarts.jpg" alt="ccheesetarts"class="myImg"><h3>Fruit Cheese Tarts</h3><p>Buttery tart crust filled with smooth, creamy cheese filling.</p>
+<div class="price">RM2.00</div></div>
+
+  <div class="menu-item"><img src="strawberrypuff.jpg" alt="strawberrypuff"class="myImg"><h3>Strawberry Pastry Puffs</h3><p>Light and crisp pastry with sweet fruit or custard filling.</p>
+<div class="price">RM3.00</div></div>
+
+  <div class="menu-item"><img src="millefeuille.jpg" alt="millefeuille"class="myImg"><h3>Mille Feuille</h3><p>Delicate layers of puff pastry and creamy custard topped with glaze.</p>
+<div class="price">RM5.00</div></div>
+
+  <div class="menu-item"><img src="donutcoklat.jpg" alt="donutcoklat"class="myImg"><h3>Chocolate Donuts</h3><p>Soft donut dipped in rich chocolate glaze, sweet and satisfying.</p>
+<div class="price">RM2.00</div></div>
+
+  <div class="menu-item"><img src="strawberrydonat.jpg" alt="strawberrydonat"class="myImg"><h3>Strawberry Donuts</h3><p>Fluffy donut coated in strawberry glaze with a fruity finish.</p>
+<div class="price">RM2.00</div></div>
+   </div>
+</div>
+
+<div id="cookies" class="content-section active">
+ <h2 style="text-align:center; margin-top: 30px;">Our Cookies</h2>
+ <div class="menu-section">
+  <div class="menu-item"><img src="redvelvetcookies.jpg" alt="redvelvet" class="myImg"><h3>Red Velvet Cookies</h3><p>Soft red velvet cookie with a hint of cocoa and creamy sweetness.</p>
+<div class="price">RM4.00</div></div>
+
+  <div class="menu-item"><img src="chocolatecookies.jpg" alt="chocolate" class="myImg"><h3>Chocolate Cookies</h3><p>Classic soft-baked cookie filled with gooey chocolate chips.</p>
+<div class="price">RM4.00</div></div>
+
+  <div class="menu-item"><img src="matcha.jpg" alt="matcha" class="myImg"><h3>Matcha Cookies</h3><p>Soft cookie with a subtle matcha flavor and a gentle sweetness.</p>
+<div class="price">RM4.00</div></div>
+
+  <div class="menu-item"><img src="oreo.jpg" alt="oreo" class="myImg"><p>Chewy cookie loaded with crushed Oreos and white chocolate chunks.</p>
+<h3>Oreo Cookies</h3><div class="price">RM4.00</div></div>
+
+  <div class="menu-item"><img src="biscoff.jpg" alt="biscoff"class="myImg"><h3>Biscoff Cookies</h3><p>Caramel-spiced cookie with the rich flavor of Biscoff spread.</p>
+<div class="price">RM4.00</div></div>
+
+<div class="menu-item"><img src="peanutcookies.jpg"alt="peanut"class="myImg"><h3>Peanut Cookies</h3><p>Crunchy and nutty cookie packed with roasted peanut flavor.</p>
+<div class="price">RM4.00</div></div>
+   </div>
+</div>
+
+<div id="icecreams" class="content-sectioncactive">
+ <h2 style="text-align:center; margin-top: 30px;">Our Ice Creams</h2>
+ <div class="menu-section">
+  <div class="menu-item"><img src="vanilla.jpg" alt="vanilla"class="myImg"><h3>Vanilla Ice Cream</h3><p>Classic vanilla flavor, smooth, creamy, and timelessly sweet.</p>
+<div class="price">RM4.00</div></div>
+
+  <div class="menu-item"><img src="chocolate.jpg" alt="chocolate"class="myImg"><h3>Chocolate Ice Cream</h3><p>Rich and creamy chocolate ice cream for pure indulgence.</p>
+<div class="price">RM4.00</div></div>
+
+  <div class="menu-item"><img src="strawberry.jpg" alt="strawberry"class="myImg"><h3>Strawberry Ice Cream</h3><p>Fresh and fruity strawberry flavor blended into a creamy scoop.</p>
+<div class="price">RM4.00</div></div>
+
+		<div class="menu-item"><img src="seosonal.jpg" alt="seasonal"class="myImg"><h3>Seasonal Ice Cream</h3><p>A special flavor inspired by the season — ask us what’s new!</p>
+<div class="price">RM5.00</div></div>
+
+		<div class="menu-item"><img src="cookiescream.jpg" alt="Cookies and Cream"class="myImg"><h3>Cookies and Cream</h3><p>Vanilla ice cream mixed with chunks of crunchy chocolate cookies.</p>
+<div class="price">RM5.00</div></div>
+
+		<div class="menu-item"><img src="minticecream.jpg" alt="Mint Ice Cream"class="myImg"><h3>Mint Ice Cream</h3><p>Cool and refreshing mint ice cream with a creamy finish.</p>
+<div class="price">RM5.00</div></div>
+
+		<div class="menu-item"><img src="bluemoonicecream.jpg" alt="Bluemoon Ice Cream"class="myImg"><h3>Blue Moon Ice Cream</h3><p>Sweet, vibrant blue ice cream with a hint of citrus and mystery.</p>
+<div class="price">RM6.00</div></div>
+
+		<div class="menu-item"><img src="rumraisin.jpg" alt="Rum Raisin Ice Cream"class="myImg"><h3>Rum Raisin Ice Cream</h3><p>Creamy ice cream infused with rum flavor and sweet raisins.</p>
+<div class="price">RM6.00</div></div>
+   </div>
+</div>
+
+
+
+
+
+<style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .myImg {
+      border-radius: 5px;
+      cursor: pointer;
+      transition: 0.3s;
+      width: 100%;
+      max-width: 500px;
+      margin: 10px;
+    }
+
+    .myImg:hover {
+      opacity: 0.7;
+    }
+
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1;
+      padding-top: 100px;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0, 0, 0, 0.9);
+    }
+
+    .modal-content {
+      margin: auto;
+      display: block;
+      width: 90%;
+      max-width: 800px;
+	border-radius:10px
+    }
+
+    #caption {
+      margin: auto;
+      display: block;
+      width: 80%;
+      max-width: 700px;
+      text-align: center;
+      color: #ccc;
+      padding: 10px 0;
+      height: 50px;
+    }
+
+    .modal-content, #caption {
+      animation-name: zoom;
+      animation-duration: 0.6s;
+    }
+
+    @keyframes zoom {
+      from {transform: scale(0)}
+      to {transform: scale(1)}
+    }
+
+    .close {
+      position: absolute;
+      top: 15px;
+      right: 35px;
+      color: #f1f1f1;
+      font-size: 40px;
+      font-weight: bold;
+      transition: 0.3s;
+	  cursor: pointer;
+    }
+
+    .close:hover,
+    .close:focus {
+      color: #bbb;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    @media only screen and (max-width: 700px) {
+      .modal-content {
+        width: 100%;
+      }
+    }
+  </style>
+  
+  <div id="myModal" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="img01">
+  <div id="caption"></div>
+</div>
+
+
+<script>
+var modal = document.getElementById("myModal");
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+
+var images = document.querySelectorAll(".myImg");
+images.forEach(function(img) {
+  img.onclick = function() {
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    captionText.innerHTML = this.alt;
+  }
+});
+
+var span = document.getElementsByClassName("close")[0];
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+
+</script>
+
+
+
+
+<footer>
+  <div class="footer">
+    <div class="footer-logo">
+      <img src="Muse Coffee.jpg" alt="Logo">
+    </div>
+    <div class="footer-links">
+      <div class="footer-column">
+        <h3>Our Company</h3>
+        <ul>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">Our Story</a></li>
+          <li><a href="#">Franchising</a></li>
+          <li><a href="#">Store Locator</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h3>Site Terms</h3>
+        <ul>
+          <li><a href="#">Terms of Use</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Do Not Sell Info</a></li>
+          <li><a href="#">Legal Notice</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h3>Customer Care</h3>
+        <ul>
+          <li><a href="#">Contact Us</a></li>
+          <li><a href="#">Returns</a></li>
+          <li><a href="#">Shipping</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+<div class="footer-bottom">
+ <p>&copy; 2025 Morning Muse Cafe. All rights reserved.</p>
+   </div>
+</footer>
+
+
+
+<script>
+ function showSection(id) {
+  const sections = document.querySelectorAll('.content-section');
+  sections.forEach(section => {
+   section.classList.remove('active');
+  });
+  const target = document.getElementById(id);
+  if (target) target.classList.add('active');
+ }
+</script>
+
+
+
+
+
+  
+   <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+        }
+
+ 
+        .go-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background-color: #00704a; 
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            font-size: 18px;
+            cursor: pointer;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+            transition: all 0.3s ease;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(20px);
+            z-index: 1000;
+        }
+
+        .go-to-top.visible {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .go-to-top:hover {
+            background-color: #005a3a;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.4);
+        }
+
+        .go-to-top:active {
+            transform: translateY(0);
+        }
+
+
+        .go-to-top::before {
+            content: '↑';
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .go-to-top-text {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background-color: #00704a;
+            color: white;
+            border: none;
+            border-radius: 25px;
+            padding: 10px 20px;
+            font-size: 14px;
+            font-weight: bold;
+            cursor: pointer;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+            transition: all 0.3s ease;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(20px);
+            z-index: 1000;
+            display: none;
+        }
+
+        .go-to-top-text.visible {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .go-to-top-text:hover {
+            background-color: #005a3a;
+            transform: translateY(-2px);
+        }
+
+       
+    </style>
+
+
+
+ <button class="go-to-top" id="goToTopBtn" onclick="scrollToTop()" title="Go to top"></button>
+    <button class="go-to-top-text" id="goToTopTextBtn" onclick="scrollToTop()" title="Go to top">
+        ↑ GO TO TOP
+    </button>
+
+    <script>
+        const goToTopBtn = document.getElementById('goToTopBtn');
+        const goToTopTextBtn = document.getElementById('goToTopTextBtn');
+        let currentStyle = 'icon'; 
+
+        window.addEventListener('scroll', function() {
+            if (window.pageYOffset > 300) {
+                if (currentStyle === 'icon') {
+                    goToTopBtn.classList.add('visible');
+                } else {
+                    goToTopTextBtn.classList.add('visible');
+                }
+            } else {
+                goToTopBtn.classList.remove('visible');
+                goToTopTextBtn.classList.remove('visible');
+            }
+        });
+
+       
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+
+        
+        function toggleButtonStyle() {
+            if (currentStyle === 'icon') {
+                goToTopBtn.style.display = 'none';
+                goToTopTextBtn.style.display = 'block';
+                currentStyle = 'text';
+            } else {
+                goToTopBtn.style.display = 'block';
+                goToTopTextBtn.style.display = 'none';
+                currentStyle = 'icon';
+            }
+            
+           
+            window.dispatchEvent(new Event('scroll'));
+        }
+
+    </script>
+
+	
+	
+
+</body>
+</html>

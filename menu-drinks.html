@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+ <title>Morning Muse Cafe-Drink Menu</title>
+
+</head>
+<body>
+
+
+<!DOCTYPE html>
+
+<html>
+<head>
+ <title>Morning Muse Cafe-Drink Menu</title>
+
+</head>
+<body>
+
+
+<style>
+ {
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box;
+   font-family: Arial, sans-serif;
+ }
+
+ body {
+   background-color: #FFFFFF;
+ }
+
+ .navbar {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   background-color: #DEAA79;
+   padding: 10px 50px;
+   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+ }
+
+ .navbar img {
+   width: 55px;
+   height: 50px;
+   height: auto;
+   border-radius: 50%;
+ }
+
+ nav ul {
+   list-style: none;
+   display: flex;
+   gap: 20px;
+   align-items: center;
+ }
+
+ nav ul li {
+   position: relative;
+ }
+
+ nav ul li a {
+   display: block;
+   padding: 10px 15px;
+   color: white;
+   text-decoration: none;
+   font-weight: bold;
+   border-radius: 5px;
+   transition: background 0.3s;
+   background-color: #DEAA79;
+ }
+
+ nav ul li a:hover {
+   background-color: #f4a460;
+   color: black;
+ }
+
+ .dropdown {
+   display: none;
+   position: absolute;
+   background-color: #DEAA79;
+   top: 100%;
+   left: 0;
+   min-width: 160px;
+   z-index: 1;
+   flex-direction: column;
+    max-height: 300px; 
+   overflow-y: auto;  
+ }
+
+ .dropdown li {
+   display: block;
+ }
+
+ nav ul li:hover .dropdown {
+   display: block;
+ }
+
+ .rounded-img {
+   border-radius: 30px;
+   margin: 10px;
+ }
+
+ .content-section {
+   display: none;
+   padding: 25px;
+ }
+
+ .content-section.active {
+   display: block;
+ }
+
+ .menu-section {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+   gap: 20px;
+   padding: 25px;
+   background-color: #FFFFFF; 
+   border-radius: 20px;
+   margin: 30px;
+ }
+
+ .menu-item {
+   background-color: #fff8ee; 
+   border-radius: 10px;
+   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+   width: 250px;
+   text-align: center;
+   padding: 25px;
+ }
+
+ .menu-item img {
+   width: 100%;
+   height: auto;
+   max-height: 520px;
+   object-fit: contain;
+   border-radius: 10px;
+   display: block;
+	margin: 0 auto;
+ }
+
+ .menu-item h3 {
+   margin: 10px 0 5px;
+   font-size: 1.2em;
+   color: #4B2E1F;
+ }
+
+ .menu-item p {
+   color: #555;
+   font-size: 0.9em;
+ }
+
+ .menu-item .price {
+   margin-top: 10px;
+   font-weight: bold;
+   color: #F4A460;
+ }
+
+ .menu-link {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 8px 16px;
+  background-color: #DEAA79;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+
+.menu-link:hover {
+  background-color: #f4a460;
+  color: black;
+}
+ 
+ 
+ .footer {
+   background-color: #DEAA79;
+   border-top: 1px solid #ccc;
+   padding: 40px 20px 20px;
+   font-family: Arial, sans-serif;
+ }
+
+ .footer-container {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-between;
+   align-items: flex-start;
+   max-width: 1200px;
+   margin: auto;
+ }
+
+ .footer-logo img {
+   width: 50px;
+   border-radius: 20%;
+ }
+
+ .footer-links {
+   display: flex;
+   flex-wrap: wrap;
+   gap: 60px;
+   flex-grow: 1;
+   justify-content: flex-end;
+ }
+
+ .footer-column h3 {
+   font-size: 1.1em;
+   margin-bottom: 15px;
+   font-weight: bold;
+   color: #333;
+ }
+
+ .footer-column ul {
+   list-style: none;
+   padding: 0;
+ }
+
+ .footer-column ul li {
+   margin-bottom: 6px;
+ }
+
+ .footer-column ul li a {
+   color: #333;
+   text-decoration: none;
+   font-size: 0.95em;
+ }
+
+ .footer-column ul li a:hover {
+   text-decoration: underline;
+ }
+
+ .footer-bottom {
+   border-top: 1px solid #eee;
+   margin-top: 5px;
+   padding-top: 5px;
+   text-align: center;
+   font-size: 0.85em;
+   color: #555;
+   font-weight: bold;
+ }
+
+</style>
+
+
+</head>
+<body>
+
+<div class="navbar">
+ <img src="Muse Coffee.jpg" alt="Cafe Logo">
+ <nav>
+   <ul>
+  <li><a href="index.html">Home</a></li>
+
+  <li>
+    <a href="about.html">About Us</a>
+    <ul class="dropdown">
+      <li><a href="our story.html">Journey</a></li>
+    </ul>
+  </li>
+
+  <li>
+    <a href="menu-food.html">Food</a>
+    <ul class="dropdown">
+      <li><a href="hot-meals.html">Hot Meals</a></li>
+      <li><a href="snacks.html">Snacks</a></li>
+      <li><a href="dessert.html">Dessert</a></li>
+      <li><a href="pastries.html">Pastries</a></li>
+      <li><a href="cookies.html">Cookies</a></li>
+      <li><a href="ice-cream.html">Ice Cream</a></li>
+    </ul>
+  </li>
+
+  <li>
+	<a href="menu-drinks.html">Drinks</a>
+	<ul class="dropdown">
+      <li><a href="frappe.html">Frappe</a></li>
+      <li><a href="coffee.html">Coffee</a></li>
+      <li><a href="hot-drinks-and-juice.html">Hot Drinks and Juice</a></li>
+      <li><a href="iced-beverage.html">Iced Beverage</a></li>
+      <li><a href="specialty-drinks.html">Specialty Drinks</a></li>
+    </ul>
+	</li>
+	
+	
+  <li><a href="location.html">Location</a></li>
+  <li><a href="feedback.html">Feedback</a></li>
+  <li><a href="contact.html">Contact</a></li>
+  <li><a href="cart.html">Add to Cart</a></li>
+</ul>
+</nav>
+</div>
+
+
+<div id="frappe" class="content-section active">
+ <h2 style="text-align:center; margin-top: 30px;">Our Frappe Drinks</h2>
+ <div class="menu-section">
+ 
+	
+  <div class="menu-item"><img src="frappevanilla.jpg" alt="Vanilla Frappe"class="myImg"><h3>Vanilla Frappe</h3><p>Creamy vanilla blend with ice and milk, perfect for a refreshing break.</p><div class="price">RM8.00</div></div>
+  <div class="menu-item"><img src="frappemocha.jpg" alt="Mocha Frappe"class="myImg"><h3>Mocha Frappe</h3><p>A rich mix of chocolate and coffee blended smoothly with ice.</p><div class="price">RM8.00</div></div>
+  <div class="menu-item"><img src="frappemango.jpg" alt="Mango Frappe"class="myImg"><h3>Mango Frappe</h3><p>Tropical mango flavor with crushed ice for a fruity, icy treat.</p><div class="price">RM9.00</div></div>
+  <div class="menu-item"><img src="frappeoreo.jpg" alt="Oreo Frappe"class="myImg"><h3>Oreo Frappe</h3><p>Crunchy Oreo blended into creamy perfection with a hint of chocolate.</p><div class="price">RM9.00</div></div>
+  <div class="menu-item"><img src="frappestrawberry.jpg" alt="Strawberry Frappe"class="myImg"><h3>Strawberry Frappe</h3>      <p>Sweet strawberries blended into a refreshing, icy delight.</p>
+<div class="price">RM12.00</div></div>
+      <div class="menu-item"><img src="frappedoublechoco.jpg" alt="Double Choco Chips Frappe"class="myImg"><h3>Double Choco Frappe</h3><p>Double chocolate and chips blended for the ultimate choco-lover.</p><div class="price">RM12.00</div></div>
+      <div class="menu-item"><img src="frappes'more.jpg" alt="S'more Frappe"class="myImg"><h3>S'more Frappe</h3><p>Toasty marshmallow, chocolate, and ice cream in one frozen cup.</p><div class="price">RM12.00</div></div>
+      <div class="menu-item"><img src="frappecaramel.jpg" alt="Caramel Frappe"class="myImg"><h3>Caramel Frappe</h3>  <p>Sweet caramel flavor blended with milk and ice, topped with joy.</p><div class="price">RM7.00</div></div>
+ </div>
+</div>
+
+<div id="coffee" class="content-section active">
+ <h2 style="text-align:center; margin-top: 30px;">Our Coffee</h2>
+ <div class="menu-section">
+  <div class="menu-item"><img src="espressoo.jpg" alt="Espresso"class="myImg"><h3>Espresso</h3><p>A bold and intense shot of rich, freshly brewed coffee.</p><div class="price">RM4.00</div></div>
+  <div class="menu-item"><img src="lattee.jpg" alt="Latte"class="myImg"><h3>Latte</h3><p>Smooth espresso blended with steamed milk for a creamy taste.</p><div class="price">RM6.00</div></div>
+  <div class="menu-item"><img src="macchiato.jpg" alt="Macchiato"class="myImg"><h3>Macchiato</h3><p>Espresso marked with a touch of milk foam for a bold finish.</p><div class="price">RM7.00</div></div>
+  <div class="menu-item"><img src="mocha.jpg" alt="Mocha"class="myImg"><h3>Mocha</h3><p>A rich mix of chocolate and coffee blended smoothly with ice.</p><div class="price">RM7.00</div></div>
+  <div class="menu-item"><img src="americano.jpg" alt="Americano"class="myImg"><h3>Americano</h3><p>Espresso diluted with hot water for a light, bold flavor.</p><div class="price">RM5.00</div></div>
+  <div class="menu-item"><img src="cappuccino.jpg" alt="Cappuccino"class="myImg"><h3>Cappuccino</h3><p>Equal parts espresso, steamed milk, and frothy foam on top.</p><div class="price">RM7.00</div></div>
+  <div class="menu-item"><img src="affogato.jpg" alt="Affogato"class="myImg"><h3>Affogato</h3><p>Vanilla ice cream drowned in a hot shot of espresso.</p><div class="price">RM9.00</div></div>
+   <div class="menu-item"><img src="dalgona.jpg" alt="Dalgona"class="myImg"><h3>Dalgona</h3><p>Fluffy whipped coffee served over cold milk and ice.</p><div class="price">RM10.00</div></div>
+ </div>
+</div>
+
+
+<div id="hotdrinksandjuices" class="content-section active">
+ <h2 style="text-align:center; margin-top: 30px;">Our Hot Drinks and Juices</h2>
+ <div class="menu-section">
+  <div class="menu-item"><img src="hotchoco.jpg" alt="Hot Choco"class="myImg"><h3>Hot Chocolate</h3><p>Rich, velvety chocolate blended with steamed milk for a cozy treat.</p>
+<div class="price">RM7.00</div></div>
+
+  <div class="menu-item"><img src="lemonade.jpg" alt="Lemonade"class="myImg"><h3>Lemonade</h3><p>Warm lemon infusion sweetened with natural honey for a soothing sip.</p>
+<div class="price">RM5.00</div></div>
+
+  <div class="menu-item"><img src="applejuice.jpg" alt="Apple Juice"class="myImg"><h3>Apple Juice</h3><p>Chilled apple juice with a crisp and sweet flavor.</p>
+<div class="price">RM6.00</div></div>
+
+  <div class="menu-item"><img src="grapepunch.jpg" alt="Grape Punch"class="myImg"><h3>Grape Punch</h3><p>A blend of fruity flavors poured over ice for a juicy refresh.</p>
+<div class="price">RM5.00</div></div>
+
+  <div class="menu-item"><img src="mangojuice.jpg" alt="Mango Juice"class="myImg"><h3>Mango Juice</h3><p>Tropical mango juice served cold, sweet and refreshing.</p>
+<div class="price">RM6.00</div></div>
+
+  <div class="menu-item"><img src="orangejuice.jpg" alt="Orange Juice"class="myImg"><h3>Orange Juice</h3><p>Freshly squeezed oranges served cold for a citrusy boost.</p>
+<div class="price">RM6.00</div></div>
+
+   <div class="menu-item"><img src="strawberryjuice.jpg" alt="Strawberry Juice"class="myImg"><h3>Strawberry Juice</h3><p>Sweet and fruity strawberry juice served chilled over ice.</p>
+<div class="price">RM6.00</div></div>
+
+   </div>
+</div>
+
+
+<div id="icedbeverage" class="content-section active">
+ <h2 style="text-align:center; margin-top: 30px;">Our Iced Beverages</h2>
+ <div class="menu-section">
+  <div class="menu-item"><img src="carbonateddrinks.jpg" alt="carbonated drinks"class="myImg"><h3>Carbonated Drinks</h3><p>Chilled fizzy soda with a bold and refreshing burst.</p>
+<div class="price">RM3.00</div></div>
+
+  <div class="menu-item"><img src="sparklingwater.jpg" alt="sparkling water"class="myImg"><h3>Sparkling Water</h3><p>Light and bubbly sparkling water served cold and crisp.</p>
+<div class="price">RM4.00</div></div>
+
+  <div class="menu-item"><img src="icetea.jpg" alt="ice tea"class="myImg"><h3>Ice Tea</h3><p>Refreshing black tea infused with lemon and served over ice.</p>
+<div class="price">RM2.50</div></div>
+
+  <div class="menu-item"><img src="icecoffee.jpg" alt="ice coffee"class="myImg"><h3>Ice Coffee</h3><p>Brewed coffee poured over ice for a cool caffeine fix.</p>
+<div class="price">RM3.00</div></div>
+
+  <div class="menu-item"><img src="dragonberry.jpg" alt="Dragon Berry"class="myImg"><h3>Dragon Berry</h3><p>A sweet blend of dragon fruit and berries over ice, fresh and vibrant.</p>
+<div class="price">RM5.00</div></div>
+   </div>
+</div>
+
+
+<div id="specialtydrinks" class="content-section active">
+ <h2 style="text-align:center; margin-top: 30px;">Our Special Drinks</h2>
+ <div class="menu-section">
+  <div class="menu-item"><img src="mocktails.jpg" alt="mocktails"class="myImg"><h3>Mocktails Drinks</h3><p>A colorful non-alcoholic mix of fruity flavors, chilled to perfection.</p>
+<div class="price">RM6.00</div></div>
+
+  <div class="menu-item"><img src="bobatea.jpg" alt="boba tea"class="myImg"><h3>Boba Tea</h3><p>Chewy tapioca pearls in creamy milk tea, served over ice.</p>
+<div class="price">RM6.00</div></div>
+
+  <div class="menu-item"><img src="pinklemonade.jpg" alt="Pink Lemonade"class="myImg"><h3>Pink Lemonade</h3><p>Sweet and tangy pink lemonade served cold with a citrus twist.</p>
+<div class="price">RM7.00</div></div>
+
+    <div class="menu-item"><img src="bluelagoon.jpg" alt="Blue Lagoons"class="myImg"><h3>Blue Lagoons</h3><p>A vibrant blue citrus drink with a cool, tropical vibe.</p>
+<div class="price">RM7.00</div></div>
+
+	 <div class="menu-item"><img src="limesparkling.jpg" alt="Lime Sparkling"class="myImg"><h3>Lime Sparkling</h3><p>Zesty lime mixed with sparkling water for a fizzy refresh.</p>
+<div class="price">RM7.00</div></div>
+   </div>
+</div>
+
+
+
+<footer>
+  <div class="footer">
+    <div class="footer-logo">
+      <img src="Muse Coffee.jpg" alt="Logo">
+    </div>
+    <div class="footer-links">
+      <div class="footer-column">
+        <h3>Our Company</h3>
+        <ul>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">Our Story</a></li>
+          <li><a href="#">Franchising</a></li>
+          <li><a href="#">Store Locator</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h3>Site Terms</h3>
+        <ul>
+          <li><a href="#">Terms of Use</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Do Not Sell Info</a></li>
+          <li><a href="#">Legal Notice</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h3>Customer Care</h3>
+        <ul>
+          <li><a href="#">Contact Us</a></li>
+          <li><a href="#">Returns</a></li>
+          <li><a href="#">Shipping</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  
+<div class="footer-bottom">
+ <p>&copy; 2025 Morning Muse Cafe. All rights reserved.</p>
+   </div>
+</footer>
+
+
+
+
+
+
+<style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .myImg {
+      border-radius: 5px;
+      cursor: pointer;
+      transition: 0.3s;
+      width: 100%;
+      max-width: 500px;
+      margin: 10px;
+    }
+
+    .myImg:hover {
+      opacity: 0.7;
+    }
+
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1;
+      padding-top: 100px;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0, 0, 0, 0.9);
+    }
+
+    .modal-content {
+      margin: auto;
+      display: block;
+      width: 90%;
+      max-width: 800px;
+	border-radius:10px
+    }
+
+    #caption {
+      margin: auto;
+      display: block;
+      width: 80%;
+      max-width: 700px;
+      text-align: center;
+      color: #ccc;
+      padding: 10px 0;
+      height: 50px;
+    }
+
+    .modal-content, #caption {
+      animation-name: zoom;
+      animation-duration: 0.6s;
+    }
+
+    @keyframes zoom {
+      from {transform: scale(0)}
+      to {transform: scale(1)}
+    }
+
+    .close {
+      position: absolute;
+      top: 15px;
+      right: 35px;
+      color: #f1f1f1;
+      font-size: 40px;
+      font-weight: bold;
+      transition: 0.3s;
+	  cursor: pointer;
+    }
+
+    .close:hover,
+    .close:focus {
+      color: #bbb;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    @media only screen and (max-width: 700px) {
+      .modal-content {
+        width: 100%;
+      }
+    }
+  </style>
+  
+  
+  
+  
+  <div id="myModal" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="img01">
+  <div id="caption"></div>
+</div>
+
+
+<script>
+var modal = document.getElementById("myModal");
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+
+var images = document.querySelectorAll(".myImg");
+images.forEach(function(img) {
+  img.onclick = function() {
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    captionText.innerHTML = this.alt;
+  }
+});
+
+var span = document.getElementsByClassName("close")[0];
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+
+</script>
+
+
+
+
+ <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+        }
+
+ 
+        .go-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background-color: #00704a; 
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            font-size: 18px;
+            cursor: pointer;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+            transition: all 0.3s ease;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(20px);
+            z-index: 1000;
+        }
+
+        .go-to-top.visible {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .go-to-top:hover {
+            background-color: #005a3a;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.4);
+        }
+
+        .go-to-top:active {
+            transform: translateY(0);
+        }
+
+
+        .go-to-top::before {
+            content: '↑';
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .go-to-top-text {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background-color: #00704a;
+            color: white;
+            border: none;
+            border-radius: 25px;
+            padding: 10px 20px;
+            font-size: 14px;
+            font-weight: bold;
+            cursor: pointer;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+            transition: all 0.3s ease;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(20px);
+            z-index: 1000;
+            display: none; 
+        }
+
+        .go-to-top-text.visible {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .go-to-top-text:hover {
+            background-color: #005a3a;
+            transform: translateY(-2px);
+        }
+
+       
+    </style>
+
+
+
+ <button class="go-to-top" id="goToTopBtn" onclick="scrollToTop()" title="Go to top"></button>
+    <button class="go-to-top-text" id="goToTopTextBtn" onclick="scrollToTop()" title="Go to top">
+        ↑ GO TO TOP
+    </button>
+
+    <script>
+        const goToTopBtn = document.getElementById('goToTopBtn');
+        const goToTopTextBtn = document.getElementById('goToTopTextBtn');
+        let currentStyle = 'icon'; 
+
+        window.addEventListener('scroll', function() {
+            if (window.pageYOffset > 300) {
+                if (currentStyle === 'icon') {
+                    goToTopBtn.classList.add('visible');
+                } else {
+                    goToTopTextBtn.classList.add('visible');
+                }
+            } else {
+                goToTopBtn.classList.remove('visible');
+                goToTopTextBtn.classList.remove('visible');
+            }
+        });
+
+       
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+
+        
+        function toggleButtonStyle() {
+            if (currentStyle === 'icon') {
+                goToTopBtn.style.display = 'none';
+                goToTopTextBtn.style.display = 'block';
+                currentStyle = 'text';
+            } else {
+                goToTopBtn.style.display = 'block';
+                goToTopTextBtn.style.display = 'none';
+                currentStyle = 'icon';
+            }
+            
+           
+            window.dispatchEvent(new Event('scroll'));
+        }
+
+    </script>
+
+
+
+
+
+
+</body>
+</html>
